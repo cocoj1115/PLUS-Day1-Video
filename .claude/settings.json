@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -fsSL https://static.heygen.ai/cli/install.sh | bash)",
+      "Bash(heygen *)",
+      "Bash(~/.local/bin/heygen *)",
+      "Bash(node .claude/skills/hyperframes/scripts/plugin-cli.mjs *)"
+    ]
+  }
+}
