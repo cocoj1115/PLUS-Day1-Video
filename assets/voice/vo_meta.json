@@ -1,0 +1,254 @@
+{
+  "voice": "af_jessica",
+  "speed": 0.85,
+  "provider": "kokoro-82m (local)",
+  "sentence_gap_s": 0.45,
+  "section_tail_s": 1.0,
+  "total_s": 128.1,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Welcome",
+      "start_s": 0.0,
+      "duration_s": 8.96,
+      "lines": [
+        {
+          "text": "Welcome to PLUS!",
+          "start": 0.0,
+          "end": 1.54
+        },
+        {
+          "text": "We're excited to meet you.",
+          "start": 1.99,
+          "end": 3.93
+        },
+        {
+          "text": "PLUS helps you learn math with support from an online tutor.",
+          "start": 4.38,
+          "end": 7.96
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Who is your tutor?",
+      "start_s": 8.96,
+      "duration_s": 18.99,
+      "lines": [
+        {
+          "text": "So, who is your tutor?",
+          "start": 0.0,
+          "end": 1.77
+        },
+        {
+          "text": "Your tutor is a college student, usually from Carnegie Mellon University.",
+          "start": 2.22,
+          "end": 6.89
+        },
+        {
+          "text": "They'll get to know you, answer your questions, and help you work through tricky problems.",
+          "start": 7.34,
+          "end": 11.91
+        },
+        {
+          "text": "It's okay to make mistakes or say, \"I don't understand yet.\"",
+          "start": 12.36,
+          "end": 15.96
+        },
+        {
+          "text": "That's part of learning!",
+          "start": 16.41,
+          "end": 17.99
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Getting started: Zoom + math software",
+      "start_s": 27.95,
+      "duration_s": 17.56,
+      "lines": [
+        {
+          "text": "Here's how to get started.",
+          "start": 0.0,
+          "end": 1.92
+        },
+        {
+          "text": "First, put on your headphones and join Zoom using the link your teacher gives you.",
+          "start": 2.37,
+          "end": 6.96
+        },
+        {
+          "text": "Open your math software, too.",
+          "start": 7.41,
+          "end": 9.54
+        },
+        {
+          "text": "Keep both open during tutoring.",
+          "start": 9.99,
+          "end": 12.4
+        },
+        {
+          "text": "You'll start in the main Zoom room, where the tutors will welcome you.",
+          "start": 12.85,
+          "end": 16.56
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Your breakout room",
+      "start_s": 45.52,
+      "duration_s": 22.73,
+      "lines": [
+        {
+          "text": "Next, your tutor will move you into your own breakout room, a smaller Zoom room just for you.",
+          "start": 0.0,
+          "end": 5.14
+        },
+        {
+          "text": "You might only see yourself at first.",
+          "start": 5.59,
+          "end": 8.0
+        },
+        {
+          "text": "That's okay!",
+          "start": 8.45,
+          "end": 9.71
+        },
+        {
+          "text": "You're in the right place.",
+          "start": 10.16,
+          "end": 11.82
+        },
+        {
+          "text": "Your tutor helps a few students and visits their rooms one at a time.",
+          "start": 12.27,
+          "end": 16.43
+        },
+        {
+          "text": "Stay in your room and start your math work.",
+          "start": 16.88,
+          "end": 19.4
+        },
+        {
+          "text": "Your tutor will come to you.",
+          "start": 19.85,
+          "end": 21.73
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "When your tutor joins",
+      "start_s": 68.25,
+      "duration_s": 12.76,
+      "lines": [
+        {
+          "text": "When your tutor joins, say hello!",
+          "start": 0.0,
+          "end": 2.39
+        },
+        {
+          "text": "Make sure you can hear each other.",
+          "start": 2.84,
+          "end": 4.91
+        },
+        {
+          "text": "Then share your screen so they can see your math.",
+          "start": 5.36,
+          "end": 8.22
+        },
+        {
+          "text": "Show them what you've tried, and tell them where you need help.",
+          "start": 8.67,
+          "end": 11.76
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "Math goals + fruit snack",
+      "start_s": 81.01,
+      "duration_s": 13.33,
+      "lines": [
+        {
+          "text": "Your tutor will also help you set math goals, like how much time you'll spend practicing or how much work you'll finish.",
+          "start": 0.0,
+          "end": 6.91
+        },
+        {
+          "text": "Each week, if you reach at least one of your goals, you can earn a fruit snack from your teacher!",
+          "start": 7.36,
+          "end": 12.33
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "title": "When your tutor steps out",
+      "start_s": 94.34,
+      "duration_s": 23.67,
+      "lines": [
+        {
+          "text": "Sometimes, your tutor will step out to help another student.",
+          "start": 0.0,
+          "end": 3.56
+        },
+        {
+          "text": "Stay in your room and keep working.",
+          "start": 4.01,
+          "end": 6.27
+        },
+        {
+          "text": "They'll check back in with you.",
+          "start": 6.72,
+          "end": 8.62
+        },
+        {
+          "text": "Need help before they return?",
+          "start": 9.07,
+          "end": 11.29
+        },
+        {
+          "text": "Click \"Raise Hand\" in Zoom.",
+          "start": 11.74,
+          "end": 13.73
+        },
+        {
+          "text": "While you wait, try another step or another problem if you can.",
+          "start": 14.18,
+          "end": 17.95
+        },
+        {
+          "text": "If you can't hear your tutor or can't share your screen, let your teacher know.",
+          "start": 18.4,
+          "end": 22.67
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "title": "Outro",
+      "start_s": 118.01,
+      "duration_s": 10.09,
+      "lines": [
+        {
+          "text": "Keep practicing, ask questions, and take it one step at a time.",
+          "start": 0.0,
+          "end": 4.03
+        },
+        {
+          "text": "Your tutor is here to help you reach your goals.",
+          "start": 4.48,
+          "end": 7.34
+        },
+        {
+          "text": "You've got this!",
+          "start": 7.79,
+          "end": 9.09
+        }
+      ]
+    }
+  ]
+}
