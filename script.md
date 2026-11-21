@@ -3,7 +3,7 @@
 - **Audience:** Grades 5–8 (middle school)
 - **Length:** 330 spoken words ≈ 2:12 at 150 wpm (~2:20–2:30 with pauses)
 - **Tone:** friendly, direct, short sentences, no jargon
-- **Visuals:** Figma design system (link: _TODO_)
+- **Visuals:** match the PLUS Teacher Handbook (Figma) — see `design/brand.md` + `design/tokens.css`
 
 > VO = 旁白原文（逐字，勿改）。On screen = 画面建议，可随时改。
 
