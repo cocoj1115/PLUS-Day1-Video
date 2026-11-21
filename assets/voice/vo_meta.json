@@ -1,252 +1,1735 @@
 {
-  "voice": "af_jessica",
-  "speed": 0.92,
-  "provider": "kokoro-82m (local)",
-  "sentence_gap_s": 0.3,
-  "section_tail_s": 0.6,
-  "total_s": 108.61,
+  "provider": "heygen",
+  "model": "heygen-voice-1-turbo-free",
+  "voice_id": "95d52e056b7b495dab8f090b44fa2ec4",
+  "voice_name": "Cassidy - Expressive & Imaginative",
+  "section_gap_s": 0.5,
+  "total_s": 107.923,
   "sections": [
     {
       "id": "s1",
       "title": "Welcome",
+      "text": "Welcome to PLUS! We're excited to meet you. PLUS helps you learn math with support from an online tutor.",
       "start_s": 0.0,
-      "duration_s": 7.31,
-      "lines": [
+      "duration_s": 7.103,
+      "words": [
         {
-          "text": "Welcome to PLUS!",
-          "start": 0.0,
-          "end": 1.29
+          "text": "Welcome",
+          "start": 0.256,
+          "end": 0.683
         },
         {
-          "text": "We're excited to meet you.",
-          "start": 1.59,
-          "end": 3.28
+          "text": "to",
+          "start": 0.725,
+          "end": 0.811
         },
         {
-          "text": "PLUS helps you learn math with support from an online tutor.",
-          "start": 3.58,
-          "end": 6.71
+          "text": "PLUS",
+          "start": 0.853,
+          "end": 1.024
+        },
+        {
+          "text": "We're",
+          "start": 1.451,
+          "end": 1.664
+        },
+        {
+          "text": "excited",
+          "start": 1.707,
+          "end": 1.963
+        },
+        {
+          "text": "to",
+          "start": 2.091,
+          "end": 2.219
+        },
+        {
+          "text": "meet",
+          "start": 2.261,
+          "end": 2.347
+        },
+        {
+          "text": "you",
+          "start": 2.389,
+          "end": 2.517
+        },
+        {
+          "text": "PLUS",
+          "start": 3.2,
+          "end": 3.456
+        },
+        {
+          "text": "helps",
+          "start": 3.712,
+          "end": 3.84
+        },
+        {
+          "text": "you",
+          "start": 3.968,
+          "end": 4.053
+        },
+        {
+          "text": "learn",
+          "start": 4.096,
+          "end": 4.224
+        },
+        {
+          "text": "math",
+          "start": 4.309,
+          "end": 4.565
+        },
+        {
+          "text": "with",
+          "start": 4.693,
+          "end": 4.821
+        },
+        {
+          "text": "support",
+          "start": 4.864,
+          "end": 5.035
+        },
+        {
+          "text": "from",
+          "start": 5.291,
+          "end": 5.419
+        },
+        {
+          "text": "an",
+          "start": 5.461,
+          "end": 5.504
+        },
+        {
+          "text": "online",
+          "start": 5.547,
+          "end": 5.717
+        },
+        {
+          "text": "tutor",
+          "start": 5.973,
+          "end": 6.229
         }
       ]
     },
     {
       "id": "s2",
       "title": "Who is your tutor?",
-      "start_s": 7.31,
-      "duration_s": 16.37,
-      "lines": [
+      "text": "So, who is your tutor? Your tutor is a college student, usually from Carnegie Mellon University. They'll get to know you, answer your questions, and help you work through tricky problems. It's okay to make mistakes or say, \"I don't understand yet.\" That's part of learning!",
+      "start_s": 7.103,
+      "duration_s": 16.871,
+      "words": [
         {
-          "text": "So, who is your tutor?",
-          "start": 0.0,
-          "end": 1.54
+          "text": "So",
+          "start": 0.299,
+          "end": 0.512
         },
         {
-          "text": "Your tutor is a college student, usually from Carnegie Mellon University.",
-          "start": 1.84,
-          "end": 6.03
+          "text": "who",
+          "start": 0.853,
+          "end": 0.981
         },
         {
-          "text": "They'll get to know you, answer your questions, and help you work through tricky problems.",
-          "start": 6.33,
-          "end": 10.54
+          "text": "is",
+          "start": 1.024,
+          "end": 1.109
         },
         {
-          "text": "It's okay to make mistakes or say, \"I don't understand yet.\"",
-          "start": 10.84,
-          "end": 14.03
+          "text": "your",
+          "start": 1.152,
+          "end": 1.28
         },
         {
-          "text": "That's part of learning!",
-          "start": 14.33,
-          "end": 15.77
+          "text": "tutor",
+          "start": 1.323,
+          "end": 1.536
+        },
+        {
+          "text": "Your",
+          "start": 2.091,
+          "end": 2.219
+        },
+        {
+          "text": "tutor",
+          "start": 2.261,
+          "end": 2.517
+        },
+        {
+          "text": "is",
+          "start": 2.603,
+          "end": 2.688
+        },
+        {
+          "text": "a",
+          "start": 2.731,
+          "end": 2.773
+        },
+        {
+          "text": "college",
+          "start": 2.816,
+          "end": 3.029
+        },
+        {
+          "text": "student",
+          "start": 3.243,
+          "end": 3.413
+        },
+        {
+          "text": "usually",
+          "start": 3.84,
+          "end": 4.011
+        },
+        {
+          "text": "from",
+          "start": 4.267,
+          "end": 4.395
+        },
+        {
+          "text": "Carnegie",
+          "start": 4.437,
+          "end": 4.821
+        },
+        {
+          "text": "Mellon",
+          "start": 4.864,
+          "end": 5.077
+        },
+        {
+          "text": "University",
+          "start": 5.12,
+          "end": 5.504
+        },
+        {
+          "text": "They'll",
+          "start": 6.272,
+          "end": 6.4
+        },
+        {
+          "text": "get",
+          "start": 6.443,
+          "end": 6.528
+        },
+        {
+          "text": "to",
+          "start": 6.571,
+          "end": 6.656
+        },
+        {
+          "text": "know",
+          "start": 6.699,
+          "end": 6.827
+        },
+        {
+          "text": "you",
+          "start": 6.869,
+          "end": 7.04
+        },
+        {
+          "text": "answer",
+          "start": 7.467,
+          "end": 7.595
+        },
+        {
+          "text": "your",
+          "start": 7.765,
+          "end": 7.851
+        },
+        {
+          "text": "questions",
+          "start": 7.893,
+          "end": 8.107
+        },
+        {
+          "text": "and",
+          "start": 8.789,
+          "end": 9.003
+        },
+        {
+          "text": "help",
+          "start": 9.045,
+          "end": 9.216
+        },
+        {
+          "text": "you",
+          "start": 9.259,
+          "end": 9.344
+        },
+        {
+          "text": "work",
+          "start": 9.387,
+          "end": 9.515
+        },
+        {
+          "text": "through",
+          "start": 9.6,
+          "end": 9.771
+        },
+        {
+          "text": "tricky",
+          "start": 9.813,
+          "end": 10.027
+        },
+        {
+          "text": "problems",
+          "start": 10.112,
+          "end": 10.325
+        },
+        {
+          "text": "It's",
+          "start": 11.004,
+          "end": 11.175
+        },
+        {
+          "text": "okay",
+          "start": 11.217,
+          "end": 11.303
+        },
+        {
+          "text": "to",
+          "start": 11.516,
+          "end": 11.601
+        },
+        {
+          "text": "make",
+          "start": 11.644,
+          "end": 11.729
+        },
+        {
+          "text": "mistakes",
+          "start": 11.772,
+          "end": 12.156
+        },
+        {
+          "text": "or",
+          "start": 12.327,
+          "end": 12.412
+        },
+        {
+          "text": "say",
+          "start": 12.455,
+          "end": 12.668
+        },
+        {
+          "text": "I",
+          "start": 13.009,
+          "end": 13.436
+        },
+        {
+          "text": "don't",
+          "start": 13.479,
+          "end": 13.649
+        },
+        {
+          "text": "understand",
+          "start": 13.692,
+          "end": 14.076
+        },
+        {
+          "text": "yet",
+          "start": 14.161,
+          "end": 14.289
+        },
+        {
+          "text": "That's",
+          "start": 14.929,
+          "end": 15.143
+        },
+        {
+          "text": "part",
+          "start": 15.185,
+          "end": 15.356
+        },
+        {
+          "text": "of",
+          "start": 15.399,
+          "end": 15.441
+        },
+        {
+          "text": "learning",
+          "start": 15.527,
+          "end": 15.697
         }
       ]
     },
     {
       "id": "s3",
       "title": "Getting started: Zoom + math software",
-      "start_s": 23.68,
-      "duration_s": 14.79,
-      "lines": [
+      "text": "Here's how to get started. First, put on your headphones and join Zoom using the link your teacher gives you. Open your math software, too. Keep both open during tutoring. You'll start in the main Zoom room, where the tutors will welcome you.",
+      "start_s": 23.974,
+      "duration_s": 13.97,
+      "words": [
         {
-          "text": "Here's how to get started.",
-          "start": 0.0,
-          "end": 1.7
+          "text": "Here's",
+          "start": 0.299,
+          "end": 0.555
         },
         {
-          "text": "First, put on your headphones and join Zoom using the link your teacher gives you.",
-          "start": 2.0,
-          "end": 6.08
+          "text": "how",
+          "start": 0.597,
+          "end": 0.683
         },
         {
-          "text": "Open your math software, too.",
-          "start": 6.38,
-          "end": 8.22
+          "text": "to",
+          "start": 0.725,
+          "end": 0.768
         },
         {
-          "text": "Keep both open during tutoring.",
-          "start": 8.52,
-          "end": 10.63
+          "text": "get",
+          "start": 0.811,
+          "end": 0.896
         },
         {
-          "text": "You'll start in the main Zoom room, where the tutors will welcome you.",
-          "start": 10.93,
-          "end": 14.19
+          "text": "started",
+          "start": 0.939,
+          "end": 1.152
+        },
+        {
+          "text": "First",
+          "start": 1.749,
+          "end": 1.963
+        },
+        {
+          "text": "put",
+          "start": 2.432,
+          "end": 2.56
+        },
+        {
+          "text": "on",
+          "start": 2.603,
+          "end": 2.645
+        },
+        {
+          "text": "your",
+          "start": 2.688,
+          "end": 2.816
+        },
+        {
+          "text": "headphones",
+          "start": 2.859,
+          "end": 3.2
+        },
+        {
+          "text": "and",
+          "start": 3.413,
+          "end": 3.499
+        },
+        {
+          "text": "join",
+          "start": 3.541,
+          "end": 3.755
+        },
+        {
+          "text": "Zoom",
+          "start": 3.925,
+          "end": 4.181
+        },
+        {
+          "text": "using",
+          "start": 4.309,
+          "end": 4.48
+        },
+        {
+          "text": "the",
+          "start": 4.608,
+          "end": 4.693
+        },
+        {
+          "text": "link",
+          "start": 4.736,
+          "end": 4.907
+        },
+        {
+          "text": "your",
+          "start": 4.992,
+          "end": 5.035
+        },
+        {
+          "text": "teacher",
+          "start": 5.077,
+          "end": 5.248
+        },
+        {
+          "text": "gives",
+          "start": 5.376,
+          "end": 5.547
+        },
+        {
+          "text": "you",
+          "start": 5.632,
+          "end": 5.717
+        },
+        {
+          "text": "Open",
+          "start": 6.229,
+          "end": 6.4
+        },
+        {
+          "text": "your",
+          "start": 6.443,
+          "end": 6.571
+        },
+        {
+          "text": "math",
+          "start": 6.613,
+          "end": 6.741
+        },
+        {
+          "text": "software",
+          "start": 6.827,
+          "end": 7.211
+        },
+        {
+          "text": "too",
+          "start": 7.339,
+          "end": 7.467
+        },
+        {
+          "text": "Keep",
+          "start": 7.979,
+          "end": 8.149
+        },
+        {
+          "text": "both",
+          "start": 8.192,
+          "end": 8.363
+        },
+        {
+          "text": "open",
+          "start": 8.448,
+          "end": 8.576
+        },
+        {
+          "text": "during",
+          "start": 8.747,
+          "end": 8.875
+        },
+        {
+          "text": "tutoring",
+          "start": 9.003,
+          "end": 9.301
+        },
+        {
+          "text": "You'll",
+          "start": 9.806,
+          "end": 9.934
+        },
+        {
+          "text": "start",
+          "start": 9.977,
+          "end": 10.19
+        },
+        {
+          "text": "in",
+          "start": 10.275,
+          "end": 10.318
+        },
+        {
+          "text": "the",
+          "start": 10.361,
+          "end": 10.446
+        },
+        {
+          "text": "main",
+          "start": 10.489,
+          "end": 10.659
+        },
+        {
+          "text": "Zoom",
+          "start": 10.83,
+          "end": 11.043
+        },
+        {
+          "text": "room",
+          "start": 11.129,
+          "end": 11.299
+        },
+        {
+          "text": "where",
+          "start": 11.683,
+          "end": 11.811
+        },
+        {
+          "text": "the",
+          "start": 11.854,
+          "end": 11.897
+        },
+        {
+          "text": "tutors",
+          "start": 11.939,
+          "end": 12.195
+        },
+        {
+          "text": "will",
+          "start": 12.323,
+          "end": 12.451
+        },
+        {
+          "text": "welcome",
+          "start": 12.494,
+          "end": 12.665
+        },
+        {
+          "text": "you",
+          "start": 12.793,
+          "end": 12.921
         }
       ]
     },
     {
       "id": "s4",
       "title": "Your breakout room",
-      "start_s": 38.47,
-      "duration_s": 19.42,
-      "lines": [
+      "text": "Next, your tutor will move you into your own breakout room\u2014a smaller Zoom room just for you. You might only see yourself at first. That's okay! You're in the right place. Your tutor helps a few students and visits their rooms one at a time. Stay in your room and start your math work. Your tutor will come to you.",
+      "start_s": 37.943,
+      "duration_s": 19.287,
+      "words": [
         {
-          "text": "Next, your tutor will move you into your own breakout room, a smaller Zoom room just for you.",
-          "start": 0.0,
-          "end": 4.7
+          "text": "Next",
+          "start": 0.299,
+          "end": 0.555
         },
         {
-          "text": "You might only see yourself at first.",
-          "start": 5.0,
-          "end": 7.13
+          "text": "your",
+          "start": 0.981,
+          "end": 1.237
         },
         {
-          "text": "That's okay!",
-          "start": 7.43,
-          "end": 8.57
+          "text": "tutor",
+          "start": 1.28,
+          "end": 1.536
         },
         {
-          "text": "You're in the right place.",
-          "start": 8.87,
-          "end": 10.35
+          "text": "will",
+          "start": 1.579,
+          "end": 1.707
         },
         {
-          "text": "Your tutor helps a few students and visits their rooms one at a time.",
-          "start": 10.65,
-          "end": 14.34
+          "text": "move",
+          "start": 1.749,
+          "end": 1.92
         },
         {
-          "text": "Stay in your room and start your math work.",
-          "start": 14.64,
-          "end": 16.86
+          "text": "you",
+          "start": 2.005,
+          "end": 2.091
         },
         {
-          "text": "Your tutor will come to you.",
-          "start": 17.16,
-          "end": 18.82
+          "text": "into",
+          "start": 2.133,
+          "end": 2.219
+        },
+        {
+          "text": "your",
+          "start": 2.347,
+          "end": 2.432
+        },
+        {
+          "text": "own",
+          "start": 2.475,
+          "end": 2.645
+        },
+        {
+          "text": "breakout",
+          "start": 2.731,
+          "end": 3.072
+        },
+        {
+          "text": "room",
+          "start": 3.157,
+          "end": 3.556
+        },
+        {
+          "text": "a",
+          "start": 3.655,
+          "end": 3.755
+        },
+        {
+          "text": "smaller",
+          "start": 3.797,
+          "end": 4.053
+        },
+        {
+          "text": "Zoom",
+          "start": 4.224,
+          "end": 4.437
+        },
+        {
+          "text": "room",
+          "start": 4.523,
+          "end": 4.651
+        },
+        {
+          "text": "just",
+          "start": 4.821,
+          "end": 4.992
+        },
+        {
+          "text": "for",
+          "start": 5.12,
+          "end": 5.205
+        },
+        {
+          "text": "you",
+          "start": 5.248,
+          "end": 5.376
+        },
+        {
+          "text": "You",
+          "start": 6.059,
+          "end": 6.101
+        },
+        {
+          "text": "might",
+          "start": 6.144,
+          "end": 6.272
+        },
+        {
+          "text": "only",
+          "start": 6.315,
+          "end": 6.4
+        },
+        {
+          "text": "see",
+          "start": 6.528,
+          "end": 6.699
+        },
+        {
+          "text": "yourself",
+          "start": 6.741,
+          "end": 6.827
+        },
+        {
+          "text": "at",
+          "start": 7.083,
+          "end": 7.125
+        },
+        {
+          "text": "first",
+          "start": 7.168,
+          "end": 7.339
+        },
+        {
+          "text": "That's",
+          "start": 7.808,
+          "end": 8.021
+        },
+        {
+          "text": "okay",
+          "start": 8.064,
+          "end": 8.149
+        },
+        {
+          "text": "You're",
+          "start": 8.832,
+          "end": 9.003
+        },
+        {
+          "text": "in",
+          "start": 9.045,
+          "end": 9.088
+        },
+        {
+          "text": "the",
+          "start": 9.131,
+          "end": 9.173
+        },
+        {
+          "text": "right",
+          "start": 9.216,
+          "end": 9.301
+        },
+        {
+          "text": "place",
+          "start": 9.387,
+          "end": 9.6
+        },
+        {
+          "text": "Your",
+          "start": 10.112,
+          "end": 10.24
+        },
+        {
+          "text": "tutor",
+          "start": 10.282,
+          "end": 10.538
+        },
+        {
+          "text": "helps",
+          "start": 10.624,
+          "end": 10.752
+        },
+        {
+          "text": "a",
+          "start": 10.88,
+          "end": 10.922
+        },
+        {
+          "text": "few",
+          "start": 10.965,
+          "end": 11.136
+        },
+        {
+          "text": "students",
+          "start": 11.178,
+          "end": 11.434
+        },
+        {
+          "text": "and",
+          "start": 11.648,
+          "end": 11.861
+        },
+        {
+          "text": "visits",
+          "start": 11.904,
+          "end": 12.16
+        },
+        {
+          "text": "their",
+          "start": 12.245,
+          "end": 12.373
+        },
+        {
+          "text": "rooms",
+          "start": 12.416,
+          "end": 12.714
+        },
+        {
+          "text": "one",
+          "start": 12.842,
+          "end": 13.098
+        },
+        {
+          "text": "at",
+          "start": 13.141,
+          "end": 13.184
+        },
+        {
+          "text": "a",
+          "start": 13.226,
+          "end": 13.269
+        },
+        {
+          "text": "time",
+          "start": 13.312,
+          "end": 13.525
+        },
+        {
+          "text": "Stay",
+          "start": 14.122,
+          "end": 14.378
+        },
+        {
+          "text": "in",
+          "start": 14.421,
+          "end": 14.506
+        },
+        {
+          "text": "your",
+          "start": 14.549,
+          "end": 14.634
+        },
+        {
+          "text": "room",
+          "start": 14.677,
+          "end": 14.848
+        },
+        {
+          "text": "and",
+          "start": 15.018,
+          "end": 15.146
+        },
+        {
+          "text": "start",
+          "start": 15.189,
+          "end": 15.445
+        },
+        {
+          "text": "your",
+          "start": 15.488,
+          "end": 15.573
+        },
+        {
+          "text": "math",
+          "start": 15.616,
+          "end": 15.786
+        },
+        {
+          "text": "work",
+          "start": 15.872,
+          "end": 16.0
+        },
+        {
+          "text": "Your",
+          "start": 17.28,
+          "end": 17.45
+        },
+        {
+          "text": "tutor",
+          "start": 17.493,
+          "end": 17.706
+        },
+        {
+          "text": "will",
+          "start": 17.749,
+          "end": 17.834
+        },
+        {
+          "text": "come",
+          "start": 17.877,
+          "end": 18.048
+        },
+        {
+          "text": "to",
+          "start": 18.133,
+          "end": 18.218
+        },
+        {
+          "text": "you",
+          "start": 18.261,
+          "end": 18.346
         }
       ]
     },
     {
       "id": "s5",
       "title": "When your tutor joins",
-      "start_s": 57.88,
-      "duration_s": 10.75,
-      "lines": [
+      "text": "When your tutor joins, say hello! Make sure you can hear each other. Then share your screen so they can see your math. Show them what you've tried, and tell them where you need help.",
+      "start_s": 57.231,
+      "duration_s": 10.382,
+      "words": [
         {
-          "text": "When your tutor joins, say hello!",
-          "start": 0.0,
-          "end": 2.09
+          "text": "When",
+          "start": 0.341,
+          "end": 0.469
         },
         {
-          "text": "Make sure you can hear each other.",
-          "start": 2.39,
-          "end": 4.23
+          "text": "your",
+          "start": 0.512,
+          "end": 0.597
         },
         {
-          "text": "Then share your screen so they can see your math.",
-          "start": 4.53,
-          "end": 7.06
+          "text": "tutor",
+          "start": 0.64,
+          "end": 0.853
         },
         {
-          "text": "Show them what you've tried, and tell them where you need help.",
-          "start": 7.36,
-          "end": 10.15
+          "text": "joins",
+          "start": 0.896,
+          "end": 1.109
+        },
+        {
+          "text": "say",
+          "start": 1.579,
+          "end": 1.749
+        },
+        {
+          "text": "hello",
+          "start": 1.792,
+          "end": 1.92
+        },
+        {
+          "text": "Make",
+          "start": 2.731,
+          "end": 2.901
+        },
+        {
+          "text": "sure",
+          "start": 2.944,
+          "end": 3.072
+        },
+        {
+          "text": "you",
+          "start": 3.115,
+          "end": 3.2
+        },
+        {
+          "text": "can",
+          "start": 3.243,
+          "end": 3.285
+        },
+        {
+          "text": "hear",
+          "start": 3.328,
+          "end": 3.456
+        },
+        {
+          "text": "each",
+          "start": 3.541,
+          "end": 3.584
+        },
+        {
+          "text": "other",
+          "start": 3.627,
+          "end": 3.797
+        },
+        {
+          "text": "Then",
+          "start": 4.395,
+          "end": 4.565
+        },
+        {
+          "text": "share",
+          "start": 4.736,
+          "end": 4.907
+        },
+        {
+          "text": "your",
+          "start": 4.949,
+          "end": 5.077
+        },
+        {
+          "text": "screen",
+          "start": 5.12,
+          "end": 5.376
+        },
+        {
+          "text": "so",
+          "start": 5.504,
+          "end": 5.632
+        },
+        {
+          "text": "they",
+          "start": 5.675,
+          "end": 5.76
+        },
+        {
+          "text": "can",
+          "start": 5.803,
+          "end": 5.888
+        },
+        {
+          "text": "see",
+          "start": 5.931,
+          "end": 6.059
+        },
+        {
+          "text": "your",
+          "start": 6.101,
+          "end": 6.187
+        },
+        {
+          "text": "math",
+          "start": 6.229,
+          "end": 6.4
+        },
+        {
+          "text": "Show",
+          "start": 6.955,
+          "end": 7.211
+        },
+        {
+          "text": "them",
+          "start": 7.253,
+          "end": 7.339
+        },
+        {
+          "text": "what",
+          "start": 7.381,
+          "end": 7.467
+        },
+        {
+          "text": "you've",
+          "start": 7.509,
+          "end": 7.68
+        },
+        {
+          "text": "tried",
+          "start": 7.723,
+          "end": 7.936
+        },
+        {
+          "text": "and",
+          "start": 8.277,
+          "end": 8.448
+        },
+        {
+          "text": "tell",
+          "start": 8.491,
+          "end": 8.704
+        },
+        {
+          "text": "them",
+          "start": 8.747,
+          "end": 8.832
+        },
+        {
+          "text": "where",
+          "start": 8.875,
+          "end": 8.96
+        },
+        {
+          "text": "you",
+          "start": 9.003,
+          "end": 9.131
+        },
+        {
+          "text": "need",
+          "start": 9.173,
+          "end": 9.259
+        },
+        {
+          "text": "help",
+          "start": 9.301,
+          "end": 9.429
         }
       ]
     },
     {
       "id": "s6",
       "title": "Math goals + fruit snack",
-      "start_s": 68.64,
-      "duration_s": 11.52,
-      "lines": [
+      "text": "Your tutor will also help you set math goals, like how much time you'll spend practicing or how much work you'll finish. Each week, if you reach at least one of your goals, you can earn a fruit snack from your teacher!",
+      "start_s": 67.613,
+      "duration_s": 11.84,
+      "words": [
         {
-          "text": "Your tutor will also help you set math goals, like how much time you'll spend practicing or how much work you'll finish.",
-          "start": 0.0,
-          "end": 6.21
+          "text": "Your",
+          "start": 0.341,
+          "end": 0.469
         },
         {
-          "text": "Each week, if you reach at least one of your goals, you can earn a fruit snack from your teacher!",
-          "start": 6.51,
-          "end": 10.92
+          "text": "tutor",
+          "start": 0.512,
+          "end": 0.768
+        },
+        {
+          "text": "will",
+          "start": 0.853,
+          "end": 0.939
+        },
+        {
+          "text": "also",
+          "start": 0.981,
+          "end": 1.109
+        },
+        {
+          "text": "help",
+          "start": 1.28,
+          "end": 1.451
+        },
+        {
+          "text": "you",
+          "start": 1.493,
+          "end": 1.579
+        },
+        {
+          "text": "set",
+          "start": 1.621,
+          "end": 1.792
+        },
+        {
+          "text": "math",
+          "start": 1.835,
+          "end": 2.048
+        },
+        {
+          "text": "goals",
+          "start": 2.133,
+          "end": 2.304
+        },
+        {
+          "text": "like",
+          "start": 2.688,
+          "end": 2.859
+        },
+        {
+          "text": "how",
+          "start": 2.987,
+          "end": 3.115
+        },
+        {
+          "text": "much",
+          "start": 3.157,
+          "end": 3.2
+        },
+        {
+          "text": "time",
+          "start": 3.328,
+          "end": 3.541
+        },
+        {
+          "text": "you'll",
+          "start": 3.627,
+          "end": 3.755
+        },
+        {
+          "text": "spend",
+          "start": 3.797,
+          "end": 3.925
+        },
+        {
+          "text": "practicing",
+          "start": 4.011,
+          "end": 4.48
+        },
+        {
+          "text": "or",
+          "start": 4.779,
+          "end": 4.907
+        },
+        {
+          "text": "how",
+          "start": 4.992,
+          "end": 5.12
+        },
+        {
+          "text": "much",
+          "start": 5.163,
+          "end": 5.248
+        },
+        {
+          "text": "work",
+          "start": 5.291,
+          "end": 5.461
+        },
+        {
+          "text": "you'll",
+          "start": 5.547,
+          "end": 5.717
+        },
+        {
+          "text": "finish",
+          "start": 5.76,
+          "end": 5.845
+        },
+        {
+          "text": "Each",
+          "start": 6.656,
+          "end": 6.827
+        },
+        {
+          "text": "week",
+          "start": 6.955,
+          "end": 7.125
+        },
+        {
+          "text": "if",
+          "start": 7.467,
+          "end": 7.552
+        },
+        {
+          "text": "you",
+          "start": 7.595,
+          "end": 7.68
+        },
+        {
+          "text": "reach",
+          "start": 7.723,
+          "end": 7.851
+        },
+        {
+          "text": "at",
+          "start": 7.936,
+          "end": 7.979
+        },
+        {
+          "text": "least",
+          "start": 8.021,
+          "end": 8.149
+        },
+        {
+          "text": "one",
+          "start": 8.235,
+          "end": 8.491
+        },
+        {
+          "text": "of",
+          "start": 8.533,
+          "end": 8.576
+        },
+        {
+          "text": "your",
+          "start": 8.619,
+          "end": 8.704
+        },
+        {
+          "text": "goals",
+          "start": 8.747,
+          "end": 8.875
+        },
+        {
+          "text": "you",
+          "start": 9.387,
+          "end": 9.557
+        },
+        {
+          "text": "can",
+          "start": 9.6,
+          "end": 9.685
+        },
+        {
+          "text": "earn",
+          "start": 9.728,
+          "end": 9.813
+        },
+        {
+          "text": "a",
+          "start": 9.856,
+          "end": 9.899
+        },
+        {
+          "text": "fruit",
+          "start": 9.941,
+          "end": 10.155
+        },
+        {
+          "text": "snack",
+          "start": 10.24,
+          "end": 10.411
+        },
+        {
+          "text": "from",
+          "start": 10.496,
+          "end": 10.581
+        },
+        {
+          "text": "your",
+          "start": 10.624,
+          "end": 10.752
+        },
+        {
+          "text": "teacher",
+          "start": 10.752,
+          "end": 10.88
         }
       ]
     },
     {
       "id": "s7",
       "title": "When your tutor steps out",
-      "start_s": 80.16,
-      "duration_s": 20.1,
-      "lines": [
+      "text": "Sometimes, your tutor will step out to help another student. Stay in your room and keep working. They'll check back in with you. Need help before they return? Click \"Raise Hand\" in Zoom. While you wait, try another step or another problem if you can. If you can't hear your tutor or can't share your screen, let your teacher know.",
+      "start_s": 79.453,
+      "duration_s": 20.078,
+      "words": [
         {
-          "text": "Sometimes, your tutor will step out to help another student.",
-          "start": 0.0,
-          "end": 3.25
+          "text": "Sometimes",
+          "start": 0.299,
+          "end": 0.683
         },
         {
-          "text": "Stay in your room and keep working.",
-          "start": 3.55,
-          "end": 5.54
+          "text": "your",
+          "start": 1.109,
+          "end": 1.365
         },
         {
-          "text": "They'll check back in with you.",
-          "start": 5.84,
-          "end": 7.56
+          "text": "tutor",
+          "start": 1.408,
+          "end": 1.621
         },
         {
-          "text": "Need help before they return?",
-          "start": 7.86,
-          "end": 9.79
+          "text": "will",
+          "start": 1.664,
+          "end": 1.749
         },
         {
-          "text": "Click \"Raise Hand\" in Zoom.",
-          "start": 10.09,
-          "end": 11.85
+          "text": "step",
+          "start": 1.792,
+          "end": 2.005
         },
         {
-          "text": "While you wait, try another step or another problem if you can.",
-          "start": 12.15,
-          "end": 15.48
+          "text": "out",
+          "start": 2.048,
+          "end": 2.176
         },
         {
-          "text": "If you can't hear your tutor or can't share your screen, let your teacher know.",
-          "start": 15.78,
-          "end": 19.5
+          "text": "to",
+          "start": 2.261,
+          "end": 2.304
+        },
+        {
+          "text": "help",
+          "start": 2.347,
+          "end": 2.475
+        },
+        {
+          "text": "another",
+          "start": 2.603,
+          "end": 2.688
+        },
+        {
+          "text": "student",
+          "start": 2.816,
+          "end": 3.072
+        },
+        {
+          "text": "Stay",
+          "start": 3.712,
+          "end": 3.925
+        },
+        {
+          "text": "in",
+          "start": 3.968,
+          "end": 4.011
+        },
+        {
+          "text": "your",
+          "start": 4.053,
+          "end": 4.139
+        },
+        {
+          "text": "room",
+          "start": 4.181,
+          "end": 4.352
+        },
+        {
+          "text": "and",
+          "start": 4.565,
+          "end": 4.693
+        },
+        {
+          "text": "keep",
+          "start": 4.736,
+          "end": 4.907
+        },
+        {
+          "text": "working",
+          "start": 4.992,
+          "end": 5.12
+        },
+        {
+          "text": "They'll",
+          "start": 5.589,
+          "end": 5.717
+        },
+        {
+          "text": "check",
+          "start": 5.76,
+          "end": 5.888
+        },
+        {
+          "text": "back",
+          "start": 5.973,
+          "end": 6.101
+        },
+        {
+          "text": "in",
+          "start": 6.144,
+          "end": 6.229
+        },
+        {
+          "text": "with",
+          "start": 6.272,
+          "end": 6.357
+        },
+        {
+          "text": "you",
+          "start": 6.443,
+          "end": 6.528
+        },
+        {
+          "text": "Need",
+          "start": 7.125,
+          "end": 7.253
+        },
+        {
+          "text": "help",
+          "start": 7.296,
+          "end": 7.424
+        },
+        {
+          "text": "before",
+          "start": 7.509,
+          "end": 7.552
+        },
+        {
+          "text": "they",
+          "start": 7.723,
+          "end": 7.808
+        },
+        {
+          "text": "return",
+          "start": 7.851,
+          "end": 7.936
+        },
+        {
+          "text": "Click",
+          "start": 8.704,
+          "end": 8.875
+        },
+        {
+          "text": "Raise",
+          "start": 9.003,
+          "end": 9.216
+        },
+        {
+          "text": "Hand",
+          "start": 9.344,
+          "end": 9.557
+        },
+        {
+          "text": "in",
+          "start": 9.771,
+          "end": 9.813
+        },
+        {
+          "text": "Zoom",
+          "start": 9.856,
+          "end": 10.069
+        },
+        {
+          "text": "While",
+          "start": 10.555,
+          "end": 10.725
+        },
+        {
+          "text": "you",
+          "start": 10.768,
+          "end": 10.896
+        },
+        {
+          "text": "wait",
+          "start": 10.939,
+          "end": 11.024
+        },
+        {
+          "text": "try",
+          "start": 11.365,
+          "end": 11.877
+        },
+        {
+          "text": "another",
+          "start": 11.963,
+          "end": 12.091
+        },
+        {
+          "text": "step",
+          "start": 12.219,
+          "end": 12.517
+        },
+        {
+          "text": "or",
+          "start": 12.688,
+          "end": 12.859
+        },
+        {
+          "text": "another",
+          "start": 13.029,
+          "end": 13.2
+        },
+        {
+          "text": "problem",
+          "start": 13.328,
+          "end": 13.541
+        },
+        {
+          "text": "if",
+          "start": 13.755,
+          "end": 13.84
+        },
+        {
+          "text": "you",
+          "start": 13.883,
+          "end": 13.968
+        },
+        {
+          "text": "can",
+          "start": 14.011,
+          "end": 14.139
+        },
+        {
+          "text": "If",
+          "start": 15.12,
+          "end": 15.248
+        },
+        {
+          "text": "you",
+          "start": 15.291,
+          "end": 15.376
+        },
+        {
+          "text": "can't",
+          "start": 15.419,
+          "end": 15.589
+        },
+        {
+          "text": "hear",
+          "start": 15.675,
+          "end": 15.76
+        },
+        {
+          "text": "your",
+          "start": 15.803,
+          "end": 15.931
+        },
+        {
+          "text": "tutor",
+          "start": 15.973,
+          "end": 16.229
+        },
+        {
+          "text": "or",
+          "start": 16.357,
+          "end": 16.656
+        },
+        {
+          "text": "can't",
+          "start": 16.741,
+          "end": 16.997
+        },
+        {
+          "text": "share",
+          "start": 17.04,
+          "end": 17.211
+        },
+        {
+          "text": "your",
+          "start": 17.253,
+          "end": 17.381
+        },
+        {
+          "text": "screen",
+          "start": 17.424,
+          "end": 17.68
+        },
+        {
+          "text": "let",
+          "start": 18.107,
+          "end": 18.448
+        },
+        {
+          "text": "your",
+          "start": 18.491,
+          "end": 18.576
+        },
+        {
+          "text": "teacher",
+          "start": 18.619,
+          "end": 18.747
+        },
+        {
+          "text": "know",
+          "start": 18.917,
+          "end": 19.088
         }
       ]
     },
     {
       "id": "s8",
       "title": "Outro",
-      "start_s": 100.27,
-      "duration_s": 8.35,
-      "lines": [
+      "text": "Keep practicing, ask questions, and take it one step at a time. Your tutor is here to help you reach your goals. You've got this!",
+      "start_s": 99.531,
+      "duration_s": 8.392,
+      "words": [
         {
-          "text": "Keep practicing, ask questions, and take it one step at a time.",
-          "start": 0.0,
-          "end": 3.47
+          "text": "Keep",
+          "start": 0.299,
+          "end": 0.512
         },
         {
-          "text": "Your tutor is here to help you reach your goals.",
-          "start": 3.77,
-          "end": 6.33
+          "text": "practicing",
+          "start": 0.555,
+          "end": 1.067
         },
         {
-          "text": "You've got this!",
-          "start": 6.63,
-          "end": 7.75
+          "text": "ask",
+          "start": 1.536,
+          "end": 1.664
+        },
+        {
+          "text": "questions",
+          "start": 1.835,
+          "end": 1.963
+        },
+        {
+          "text": "and",
+          "start": 2.603,
+          "end": 2.901
+        },
+        {
+          "text": "take",
+          "start": 2.944,
+          "end": 3.072
+        },
+        {
+          "text": "it",
+          "start": 3.115,
+          "end": 3.157
+        },
+        {
+          "text": "one",
+          "start": 3.2,
+          "end": 3.413
+        },
+        {
+          "text": "step",
+          "start": 3.499,
+          "end": 3.712
+        },
+        {
+          "text": "at",
+          "start": 3.755,
+          "end": 3.797
+        },
+        {
+          "text": "a",
+          "start": 3.84,
+          "end": 3.883
+        },
+        {
+          "text": "time",
+          "start": 3.925,
+          "end": 4.096
+        },
+        {
+          "text": "Your",
+          "start": 4.693,
+          "end": 4.821
+        },
+        {
+          "text": "tutor",
+          "start": 4.864,
+          "end": 5.12
+        },
+        {
+          "text": "is",
+          "start": 5.248,
+          "end": 5.291
+        },
+        {
+          "text": "here",
+          "start": 5.333,
+          "end": 5.461
+        },
+        {
+          "text": "to",
+          "start": 5.504,
+          "end": 5.589
+        },
+        {
+          "text": "help",
+          "start": 5.632,
+          "end": 5.717
+        },
+        {
+          "text": "you",
+          "start": 5.803,
+          "end": 5.888
+        },
+        {
+          "text": "reach",
+          "start": 5.931,
+          "end": 6.059
+        },
+        {
+          "text": "your",
+          "start": 6.144,
+          "end": 6.187
+        },
+        {
+          "text": "goals",
+          "start": 6.229,
+          "end": 6.4
+        },
+        {
+          "text": "You've",
+          "start": 6.869,
+          "end": 7.04
+        },
+        {
+          "text": "got",
+          "start": 7.083,
+          "end": 7.211
+        },
+        {
+          "text": "this",
+          "start": 7.296,
+          "end": 7.467
         }
       ]
     }
