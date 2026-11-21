@@ -3,3 +3,6 @@
 assets/voice/samples/*.wav
 assets/voice/*.wav
 assets/voice/samples/**/*.wav
+renders/
+.hyperframes/
+node_modules/
