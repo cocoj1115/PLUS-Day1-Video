@@ -2,3 +2,4 @@
 .venv-tts/
 assets/voice/samples/*.wav
 assets/voice/*.wav
+assets/voice/samples/**/*.wav
