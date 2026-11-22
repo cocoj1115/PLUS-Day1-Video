@@ -1,4 +1,4 @@
-# PLUS Intro Video
+# PLUS student-facing Intro Video
 
 This video is built with [HyperFrames](https://hyperframes.heygen.com): every scene is an HTML page
 animated with GSAP and rendered to MP4. The whole film can be edited as text and re-rendered.
