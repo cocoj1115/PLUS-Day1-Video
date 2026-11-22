@@ -82,6 +82,25 @@ svg("waves.svg", 200, 90, ["M20 25 Q35 45 20 65", "M45 15 Q68 45 45 75", "M180 2
 svg("rings.svg", 780, 52, [60, 200, 340, 480, 620].map((x) => P(`M${x} 46 C ${x} 6 ${x + 32} 6 ${x + 32} 46`, { strokeWidth: 6, roughness: 0.8 })).join(""));
 svg("stone.svg", 400, 100, E(200, 50, 390, 88, { fill: C.yellow1, stroke: C.yellow2, strokeWidth: 5, roughness: 1.4 }), true);
 
+// --- speech bubbles (hand-drawn), tail toward the speaker -------------------
+// body: rounded blob w×h; tail drawn as part of the outline
+function bubblePath(w, h, tail) {
+  const r = Math.min(w, h) * 0.32;
+  if (tail === "left") {          // tail on the left side, pointing left (toward the photo)
+    const ty = h * 0.55;
+    return `M${r} 0 L${w - r} 0 Q${w} 0 ${w} ${r} L${w} ${h - r} Q${w} ${h} ${w - r} ${h} L${r} ${h} Q0 ${h} 0 ${h - r} L0 ${ty + 22} L-46 ${ty + 6} L0 ${ty - 18} L0 ${r} Q0 0 ${r} 0 Z`;
+  }
+  // tail bottom-left, pointing down-left (toward the student)
+  const tx = w * 0.16;
+  return `M${r} 0 L${w - r} 0 Q${w} 0 ${w} ${r} L${w} ${h - r} Q${w} ${h} ${w - r} ${h} L${tx + 60} ${h} L${tx - 30} ${h + 62} L${tx + 14} ${h} L${r} ${h} Q0 ${h} 0 ${h - r} L0 ${r} Q0 0 ${r} 0 Z`;
+}
+const bub = (name, w, h, fill, stroke, tail) =>
+  svg(name, w + 60, h + 70, `<g transform="translate(50 4)">` + P(bubblePath(w, h, tail), { fill, stroke, strokeWidth: 5, roughness: 1.0, bowing: 1.4 }) + `</g>`);
+bub("bubble-yellow.svg", 300, 230, C.yellow1, C.yellow2, "left");
+bub("bubble-blue.svg", 300, 230, C.blue1, C.blue, "left");
+bub("bubble-pink.svg", 300, 230, C.pink, C.coral, "left");
+bub("bubble-say.svg", 640, 150, C.white, INK, "bottom");
+
 // --- inline shapes (outlines the scenes animate) --------------------------
 const one = (d) => gen.toPaths(d).map((p) => p.d).join(" ");
 const inline = {

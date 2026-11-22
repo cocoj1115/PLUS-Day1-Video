@@ -18,15 +18,18 @@
     #t-tape-r { right: -24px; transform: rotate(14deg); }
 
     /* sticky notes around the photo */
-    .t-note { position: absolute; width: 280px; height: 250px; padding: 20px 16px; border-radius: 6px; text-align: center; font-size: 37px; font-weight: 800; line-height: 1.15; color: #00454d; box-shadow: 0 8px 0 rgba(0, 69, 77, 0.07); }
-    .t-ico { display: block; width: 84px; height: 84px; margin: 0 auto 8px; }
-    #t-n1 { left: 1490px; top: 90px; background: #fbe9b2; }
-    #t-n2 { left: 1520px; top: 370px; background: #d7eefd; }
-    #t-n3 { left: 1150px; top: 600px; background: #f8dbef; }
+    .t-note { position: absolute; width: 376px; height: 316px; background: center / 100% 100% no-repeat; }
+    .t-note .t-in { position: absolute; left: 58px; top: 12px; width: 300px; height: 230px; padding: 16px 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; font-size: 36px; font-weight: 800; line-height: 1.1; color: #00454d; }
+    .t-ico { display: block; width: 56px; height: 56px; }
+    #t-n1 { left: 1432px; top: 70px; background-image: url("assets/doodles/bubble-yellow.svg"); }
+    #t-n2 { left: 1462px; top: 372px; background-image: url("assets/doodles/bubble-blue.svg"); }
+    #t-n3 { left: 1092px; top: 596px; background-image: url("assets/doodles/bubble-pink.svg"); }
 
     /* "I don't understand... yet" */
-    #t-bubble { position: absolute; left: 300px; top: 300px; padding: 22px 34px; background: #ffffff; border: 5px solid #00454d; border-radius: 34px 34px 34px 8px; font-size: 50px; font-weight: 800; color: #00454d; white-space: nowrap; transform-origin: 0% 100%; }
-    #t-yet { position: relative; display: inline-block; }
+    #t-bubble { position: absolute; left: 240px; top: 300px; width: 716px; height: 236px; background: url("assets/doodles/bubble-say.svg") center / 100% 100% no-repeat; transform-origin: 18% 95%; }
+    #t-say { position: absolute; left: 58px; top: 12px; width: 640px; height: 150px; display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 52px; font-weight: 800; color: #00454d; white-space: nowrap; }
+    .t-sw { display: inline-block; }
+    #t-yet { position: relative; display: inline-block; transform-origin: 50% 60%; }
     #t-yet-hl { position: absolute; left: -8px; right: -10px; bottom: 4px; height: 26px; background: #f5c263; opacity: 0.6; border-radius: 14px 6px 16px 8px; transform-origin: 0% 50%; }
     #t-yet-word { position: relative; }
 
@@ -55,18 +58,9 @@
           <span id="t-tape-l" class="t-tape"></span>
           <span id="t-tape-r" class="t-tape"></span>
         </div>
-        <div id="t-n1" class="t-note">
-          <img class="t-ico" src="assets/doodles/smile.svg" alt="" />
-          Gets to know you
-        </div>
-        <div id="t-n2" class="t-note">
-          <img class="t-ico" src="assets/doodles/ask.svg" alt="" />
-          Answers your questions
-        </div>
-        <div id="t-n3" class="t-note">
-          <img class="t-ico" src="assets/doodles/pencil.svg" alt="" />
-          Helps with tricky problems
-        </div>
+        <div id="t-n1" class="t-note"><div class="t-in"><img class="t-ico" src="assets/doodles/smile.svg" alt="" /><span>Gets to know you</span></div></div>
+        <div id="t-n2" class="t-note"><div class="t-in"><img class="t-ico" src="assets/doodles/ask.svg" alt="" /><span>Answers your questions</span></div></div>
+        <div id="t-n3" class="t-note"><div class="t-in"><img class="t-ico" src="assets/doodles/pencil.svg" alt="" /><span>Helps with tricky problems</span></div></div>
       </div>
 
       <div id="t-paper">
@@ -74,7 +68,7 @@
       </div>
       <img id="t-check" src="assets/doodles/check.svg" alt="" />
 
-      <div id="t-bubble">I don't understand… <span id="t-yet"><span id="t-yet-hl"></span><span id="t-yet-word">yet</span></span></div>
+      <div id="t-bubble"><div id="t-say"><span class="t-sw">I</span><span class="t-sw">don't</span><span class="t-sw">understand…</span><span id="t-yet"><span id="t-yet-hl"></span><span id="t-yet-word">yet</span></span></div></div>
 
       <img id="t-s1" class="t-star" src="assets/doodles/star.svg" alt="" />
       <img id="t-s2" class="t-star" src="assets/doodles/star.svg" alt="" />
@@ -99,8 +93,9 @@
     S("#t-n2", { rotation: -5 });
     S("#t-n3", { rotation: 4 });
     S("#t-board", { x: 0, scale: 1 });
-    S("#t-bubble", { opacity: 0, scale: 0.5 });
-    S("#t-yet", { opacity: 0 });
+    S("#t-bubble", { opacity: 0, scale: 0.3, rotation: -10 });
+    S(".t-sw", { opacity: 0, y: 14 });
+    S("#t-yet", { opacity: 0, scale: 1.6, rotation: -8 });
     S("#t-yet-hl", { scaleX: 0 });
     S("#t-paper", { opacity: 0, rotation: -4, y: 40 });
     S("#t-strike", { scaleX: 0, rotation: -12 });
@@ -134,8 +129,13 @@
     tl.to("#t-strike", { scaleX: 1, duration: 0.3, ease: "power2.out" }, 11.95);
 
     // "or say, 'I don't understand yet.'"
-    tl.to("#t-bubble", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 12.9);
-    tl.to("#t-yet", { opacity: 1, duration: 0.15 }, 14.1);
+    tl.to("#t-bubble", { opacity: 1, scale: 1, rotation: -2, duration: 0.45, ease: "back.out(1.9)" }, 12.85);
+    // the words arrive as they are said: "I" 13.0 · "don't" 13.48 · "understand" 13.69
+    [[1, 13.0], [2, 13.45], [3, 13.66]].forEach(([n, t]) =>
+      tl.to(`.t-sw:nth-child(${n})`, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, t));
+    tl.to("#t-yet", { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2.2)" }, 14.1);
+    tl.to("#t-bubble", { rotation: 1.5, duration: 0.15, ease: "power2.out" }, 14.15);
+    tl.to("#t-bubble", { rotation: -2, duration: 0.3, ease: "power2.inOut" }, 14.3);
     tl.to("#t-yet-hl", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 14.2);
 
     // "That's part of learning!" — the right answer, a check, stars, a happy hop

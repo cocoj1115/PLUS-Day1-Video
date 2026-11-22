@@ -66,7 +66,7 @@
 
       <div id="b-roomgrp">
         <div id="b-room" class="b-win">
-          <div id="b-room-bar" class="b-bar" data-layout-ignore><span id="b-rb-hl" style="position:absolute;left:18px;top:40px;width:260px;height:18px;background:#f5c263;opacity:.6;border-radius:10px;transform-origin:0% 50%"></span><span style="position:relative">Breakout room</span></div>
+          <div id="b-room-bar" class="b-bar" data-layout-ignore>Breakout room</div>
           <div id="b-empty" data-layout-ignore><span class="b-dot">•</span><span class="b-dot">•</span><span class="b-dot">•</span></div>
         </div>
         <div id="b-me"><img src="assets/brand/char-plus.png" alt="you" /><b data-layout-ignore>You</b></div>
@@ -93,10 +93,9 @@
     S("#b-room", { opacity: 0, scale: 0.7 });
     S("#b-empty", { opacity: 0 });
     S(".b-dot", { opacity: 0 });
-    S("#b-rb-hl", { scaleX: 0 });
     S("#b-me img", { rotation: 0, y: 0 });
     // "You" starts exactly in the main-room grid's centre slot (x 760, y 437, ~400×227); its home slot in the room is x 500, y 290
-    S("#b-me", { x: 260, y: 147, scale: 0.9, opacity: 1 });
+    S("#b-me", { x: 308, y: 147, scale: 0.688, opacity: 1 });
     S("#b-sticker", { opacity: 0, scale: 1.5, rotation: -8 });
     S("#b-roomgrp", { x: 0, y: 0, scale: 1 });
     S(".b-mini", { opacity: 0, scale: 0.22, borderColor: "#00454d" });
@@ -109,13 +108,12 @@
     tl.to("#b-stage", { scale: 1, duration: 0.55, ease: "power3.out" }, 0);
 
     // "your tutor will move you into your own breakout room"
-    tl.to("#b-me", { scale: 0.98, y: 60, duration: 0.3, ease: "power2.out" }, 1.6);
+    tl.to("#b-me", { scale: 0.74, x: 298, y: 132, duration: 0.3, ease: "power2.out" }, 1.6);
     tl.to("#b-main", { opacity: 0, scale: 0.94, duration: 0.45, ease: "power2.in" }, 2.0);
     tl.to("#b-room", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.4)" }, 2.6);
     tl.to("#b-me", { x: 0, y: 0, scale: 1, duration: 0.6, ease: "power3.inOut" }, 2.7);
 
     // "You might only see yourself at first" — an empty slot beside you
-    tl.to("#b-rb-hl", { scaleX: 1, duration: 0.4, ease: "power2.inOut" }, 3.9);
     // "just for you" — your tile gives a small hop
     tl.to("#b-me img", { y: -26, duration: 0.2, ease: "power2.out" }, 5.15);
     tl.to("#b-me img", { y: 0, duration: 0.25, ease: "power2.in" }, 5.35);
