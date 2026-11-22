@@ -1,11 +1,7 @@
 # PLUS Intro Video
 
-A 1:51 intro video for middle-school students (grades 5–8) joining **PLUS** tutoring. It explains
-who their tutor is, how to join Zoom, breakout rooms, sharing their screen, goals, and what to do
-when the tutor steps out.
-
-The video is built with [HyperFrames](https://hyperframes.heygen.com): every scene is an HTML page
-animated with GSAP and rendered to MP4, so the whole film can be edited as text and re-rendered.
+This video is built with [HyperFrames](https://hyperframes.heygen.com): every scene is an HTML page
+animated with GSAP and rendered to MP4. The whole film can be edited as text and re-rendered.
 
 | | |
 |---|---|
@@ -61,12 +57,11 @@ Secrets (Figma token, HeyGen API key) are never committed; they live in the clou
 
 ## Versions and sharing
 
-- Recommended: tag each delivered cut (`v4`, `v5`, …) and attach its MP4 to a GitHub Release of the same name, so every version stays downloadable next to the exact source that made it.
-- The repo is private. To give someone access: **Settings → Collaborators → Add people** (they need a GitHub account). For people who only need to watch, share the MP4 from the Release, or upload it to Google Drive / YouTube (unlisted).
+- Recommended: tag each delivered cut (`v4`, `v5`, …) and attach its MP4 to a GitHub Release of the same name, so every version stays 
 
 ## Credits
 
 - Mascots, logo and visual style: PLUS Teacher Handbook (Figma).
 - Carnegie Mellon University wordmark: via Wikimedia Commons; trademark of Carnegie Mellon University.
 - Voice: HeyGen ("Cassidy"). Font: DM Sans (SIL Open Font License). Sound effects: see `assets/sfx/CREDITS.md`.
-- Team photo: PLUS. It shows real people, so keep this repository and its videos private unless the people pictured have agreed to wider sharing.
+- Creator: Coco Jiang & Claude code
