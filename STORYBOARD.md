@@ -78,7 +78,7 @@ narration's word timings in `assets/voice/vo_meta.json`.
 |---|---|---|
 | 1:08.2 | "Your tutor will also help you set math goals…" | Notepad: "My goals this week". |
 | 1:11 | "…how much time you'll spend practicing…" | "Practice 30 min". |
-| 1:13 | "…or how much work you'll finish." | "Finish 10 problems". |
+| 1:13 | "…or how much work you'll finish." | "Finish 10 lessons". |
 | 1:14.6 | "Each week, if you reach at least one of your goals…" | Goal 1's bar fills; a check. |
 | 1:17.5 | "…you can earn a fruit snack from your teacher!" | The teacher appears; a fruit-snack pack with a matching tilted label; the mascots cheer. |
 
@@ -90,7 +90,7 @@ narration's word timings in `assets/voice/vo_meta.json`.
 | 1:25.4 | "They'll check back in with you." | A curved arrow from the empty slot back to you. |
 | 1:26.9 | "Need help before they return?" | A question mark next to the line in your workspace. |
 | 1:28.5 | "Click 'Raise Hand' in Zoom." | Toolbar; the cursor clicks Raise Hand; a hand appears on your tile. |
-| 1:30.4 | "While you wait, try another step or another problem…" | The next problem is written. |
+| 1:30.4 | "While you wait, try another step or another problem…" | Two stickers, one per idea: "Try another step" and "Try another problem". |
 | 1:34.9 | "If you can't hear your tutor or can't share your screen, let your teacher know." | Two problem icons appear, then fly along curves to the teacher, who catches them and gives a thumbs-up. |
 
 ### 8 · Outro — 1:40–1:51

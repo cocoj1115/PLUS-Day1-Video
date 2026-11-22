@@ -82,6 +82,13 @@ svg("waves.svg", 200, 90, ["M20 25 Q35 45 20 65", "M45 15 Q68 45 45 75", "M180 2
 svg("rings.svg", 780, 52, [60, 200, 340, 480, 620].map((x) => P(`M${x} 46 C ${x} 6 ${x + 32} 6 ${x + 32} 46`, { strokeWidth: 6, roughness: 0.8 })).join(""));
 svg("stone.svg", 400, 100, E(200, 50, 390, 88, { fill: C.yellow1, stroke: C.yellow2, strokeWidth: 5, roughness: 1.4 }), true);
 
+// "try another step" / "try another problem" (scene 7 stickers)
+svg("steps.svg", 100, 100, P("M10 88 L10 68 L34 68 L34 48 L58 48 L58 28 L82 28 L82 88 Z", { fill: C.blue1, roughness: 0.9 }) +
+  P("M52 16 L70 16 L70 8 L88 20 L70 32 L70 24 L52 24 Z", { fill: C.blue2, stroke: C.blue2, strokeWidth: 3, roughness: 0.6 }));
+svg("page.svg", 100, 100, P("M14 18 L28 8 L62 8 L62 84 L14 84 Z", { fill: C.white, roughness: 0.8 }) +
+  P("M24 8 L28 8 L14 18", { roughness: 0.4 }) + P("M30 34 L52 34 M30 48 L52 48 M30 62 L46 62", { strokeWidth: 4, roughness: 0.6 }) +
+  P("M58 30 L80 22 L80 92 L58 92", { fill: C.yellow1, roughness: 0.8 }) + P("M68 52 L90 52 M82 44 L90 52 L82 60", { stroke: C.green2, strokeWidth: 5, roughness: 0.5 }));
+
 // --- speech bubbles (hand-drawn), tail toward the speaker -------------------
 // body: rounded blob w×h; tail drawn as part of the outline
 function bubblePath(w, h, tail) {

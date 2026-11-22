@@ -16,6 +16,11 @@
     #o-paper div { white-space: nowrap; clip-path: inset(0 100% 0 0); }
     #o-paper { overflow: visible; }
     #o-back { position: absolute; left: 830px; top: 650px; width: 300px; }
+    /* "try another step / another problem" stickers */
+    .o-stk { position: absolute; top: 690px; display: flex; align-items: center; gap: 14px; padding: 12px 28px 12px 16px; border-radius: 20px; font-size: 40px; font-weight: 800; color: #00454d; white-space: nowrap; box-shadow: 0 6px 0 rgba(0, 69, 77, 0.08); transform-origin: 50% 50%; }
+    .o-stk img { width: 62px; height: 62px; }
+    #o-stk1 { left: 450px; background: #d7eefd; }
+    #o-stk2 { left: 980px; background: #fbe9b2; }
     #o-q { position: absolute; left: 300px; top: 6px; width: 40px; transform-origin: 50% 100%; }
     #o-hand { position: absolute; left: 820px; top: 240px; width: 86px; transform-origin: 50% 100%; }
 
@@ -43,9 +48,11 @@
         <div id="o-tut" class="o-tile"><img src="assets/brand/char-equals.png" alt="tutor" /><b>Tutor</b></div>
         <div id="o-me" class="o-tile">
           <img src="assets/brand/char-plus.png" alt="you" /><b data-layout-ignore>You</b>
-          <div id="o-paper"><div id="o-w1">2x + 3 = 11</div><div id="o-w2">4x − 2 = 10</div><img id="o-q" src="assets/doodles/question.svg" alt="" /></div>
+          <div id="o-paper"><div id="o-w1">2x + 3 = 11</div><img id="o-q" src="assets/doodles/question.svg" alt="" /></div>
         </div>
         <img id="o-back" src="assets/doodles/arrow-back.svg" alt="" />
+        <div id="o-stk1" class="o-stk"><img src="assets/doodles/steps.svg" alt="" />Try another step</div>
+        <div id="o-stk2" class="o-stk"><img src="assets/doodles/page.svg" alt="" />Try another problem</div>
         <img id="o-hand" src="assets/doodles/hand.svg" alt="raised hand" />
         <div id="o-toolbar">
           <span class="o-btn">Mic</span><span class="o-btn">Video</span>
@@ -80,6 +87,8 @@
     S("#o-q", { opacity: 0, scale: 0.3 });
     S("#o-hand", { opacity: 0, scale: 0.3, rotation: -20 });
     S("#o-toolbar", { y: 110, opacity: 0 });
+    S("#o-stk1", { opacity: 0, scale: 1.5, rotation: -10 });
+    S("#o-stk2", { opacity: 0, scale: 1.5, rotation: 10 });
     S("#o-raise", { scale: 1 });
     S("#o-cursor", { opacity: 0, x: 1500, y: 980, scale: 1 });
     S(".o-prob", { opacity: 0, scale: 0.4 });
@@ -116,9 +125,11 @@
     tl.to("#o-q", { opacity: 0, duration: 0.2 }, 9.6);
     tl.to("#o-cursor", { opacity: 0, duration: 0.2 }, 9.8);
 
-    // "try another step or another problem"
-    tl.to("#o-w2", { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "none" }, 11.95);
-    tl.to("#o-toolbar", { y: 110, opacity: 0, duration: 0.3, ease: "power2.in" }, 13.0);
+    // "While you wait, try another step or another problem" — two stickers slap on, one per idea
+    tl.to("#o-toolbar", { y: 110, opacity: 0, duration: 0.3, ease: "power2.in" }, 10.7);
+    tl.to("#o-back", { opacity: 0, duration: 0.25 }, 10.7);
+    tl.to("#o-stk1", { opacity: 1, scale: 1, rotation: -3, duration: 0.35, ease: "back.out(1.8)" }, 11.4);
+    tl.to("#o-stk2", { opacity: 1, scale: 1, rotation: 2, duration: 0.35, ease: "back.out(1.8)" }, 13.05);
 
     // "If you can't hear your tutor or can't share your screen, let your teacher know."
     tl.to("#o-room", { x: -260, scale: 0.72, duration: 0.7, ease: "power3.inOut" }, 14.8);
