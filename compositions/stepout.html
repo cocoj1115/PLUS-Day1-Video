@@ -14,8 +14,9 @@
     #o-empty { position: absolute; left: 990px; top: 220px; width: 520px; height: 440px; border: 5px dashed #90c9f4; border-radius: 20px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 30px; font-size: 42px; font-weight: 800; color: #367cb3; }
     #o-paper { position: absolute; left: 40px; right: 40px; bottom: 26px; height: 170px; background: #ffffff; border: 4px solid #90c9f4; border-radius: 12px; padding: 10px 22px; font-size: 40px; font-weight: 800; color: #367cb3; line-height: 1.3; }
     #o-paper div { white-space: nowrap; clip-path: inset(0 100% 0 0); }
+    #o-paper { overflow: visible; }
     #o-back { position: absolute; left: 830px; top: 650px; width: 300px; }
-    #o-q { position: absolute; left: 925px; top: 240px; width: 70px; transform-origin: 50% 100%; }
+    #o-q { position: absolute; left: 300px; top: 6px; width: 40px; transform-origin: 50% 100%; }
     #o-hand { position: absolute; left: 820px; top: 240px; width: 86px; transform-origin: 50% 100%; }
 
     #o-toolbar { position: absolute; left: 366px; top: 790px; width: 1188px; height: 94px; background: #f5fcff; border-top: 4px solid #00454d; display: flex; align-items: center; justify-content: center; gap: 26px; }
@@ -26,6 +27,7 @@
     /* tech trouble -> tell your teacher */
     .o-prob { position: absolute; left: 1220px; width: 230px; text-align: center; font-size: 30px; font-weight: 800; color: #be5052; }
     .o-prob img { display: block; width: 150px; margin: 0 auto 6px; }
+    .o-prob span { display: block; }
     #o-p1 { top: 300px; } #o-p2 { top: 560px; }
     #o-arrow { position: absolute; left: 1430px; top: 360px; width: 200px; height: 380px; overflow: visible; }
     #o-teacher { position: absolute; left: 1600px; bottom: 120px; width: 210px; transform-origin: 50% 100%; }
@@ -41,10 +43,9 @@
         <div id="o-tut" class="o-tile"><img src="assets/brand/char-equals.png" alt="tutor" /><b>Tutor</b></div>
         <div id="o-me" class="o-tile">
           <img src="assets/brand/char-plus.png" alt="you" /><b data-layout-ignore>You</b>
-          <div id="o-paper"><div id="o-w1">2x + 3 = 11</div><div id="o-w2">4x − 2 = 10</div><div id="o-w3"></div></div>
+          <div id="o-paper"><div id="o-w1">2x + 3 = 11</div><div id="o-w2">4x − 2 = 10</div><img id="o-q" src="assets/doodles/question.svg" alt="" /></div>
         </div>
         <img id="o-back" src="assets/doodles/arrow-back.svg" alt="" />
-        <img id="o-q" src="assets/doodles/question.svg" alt="" />
         <img id="o-hand" src="assets/doodles/hand.svg" alt="raised hand" />
         <div id="o-toolbar">
           <span class="o-btn">Mic</span><span class="o-btn">Video</span>
@@ -53,11 +54,8 @@
         <img id="o-cursor" src="assets/doodles/cursor.svg" alt="" />
       </div>
 
-      <div id="o-p1" class="o-prob"><img src="assets/doodles/speaker-muted.svg" alt="" />Can't hear?</div>
-      <div id="o-p2" class="o-prob"><img src="assets/doodles/screen-x.svg" alt="" />Can't share?</div>
-      <svg id="o-arrow" viewBox="0 0 200 380" fill="none" stroke="#00454d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-        <path id="o-arrow-p" d="M0 50 C 110 60 160 200 172 330 M0 320 C 80 330 140 340 170 342 M148 318 L174 346 L196 316" />
-      </svg>
+      <div id="o-p1" class="o-prob"><img src="assets/doodles/speaker-muted.svg" alt="" /><span>Can't hear?</span></div>
+      <div id="o-p2" class="o-prob"><img src="assets/doodles/screen-x.svg" alt="" /><span>Can't share?</span></div>
       <div id="o-teach-label">Teacher</div>
       <img id="o-teacher" src="assets/brand/char-divide.png" alt="yellow divide character, the teacher" data-layout-allow-overflow />
       <img id="o-thumb" src="assets/doodles/thumbs.svg" alt="" />
@@ -85,7 +83,8 @@
     S("#o-raise", { scale: 1 });
     S("#o-cursor", { opacity: 0, x: 1500, y: 980, scale: 1 });
     S(".o-prob", { opacity: 0, scale: 0.4 });
-    S("#o-arrow-p", { strokeDasharray: 800, strokeDashoffset: 800 });
+    S(".o-prob", { x: 0, y: 0 });
+    S(".o-prob span", { opacity: 1 });
     S("#o-teacher", { y: 340 });
     S("#o-teach-label", { opacity: 0 });
     S("#o-thumb", { opacity: 0, scale: 0.3, rotation: -20 });
@@ -125,10 +124,22 @@
     tl.to("#o-room", { x: -260, scale: 0.72, duration: 0.7, ease: "power3.inOut" }, 14.8);
     tl.to("#o-p1", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 15.65);
     tl.to("#o-p2", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 17.15);
-    tl.to("#o-arrow-p", { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut" }, 17.85);
-    tl.to("#o-teacher", { y: 0, duration: 0.5, ease: "back.out(1.5)" }, 18.25);
-    tl.to("#o-teach-label", { opacity: 1, duration: 0.25 }, 18.5);
-    tl.to("#o-thumb", { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, 18.9);
+    // "let your teacher know" — the teacher pops up and both problems fly over along an arc
+    tl.to("#o-teacher", { y: 0, duration: 0.45, ease: "back.out(1.5)" }, 17.65);
+    tl.to("#o-teach-label", { opacity: 1, duration: 0.25 }, 17.85);
+    // x eases in while y eases out, so each icon travels on a smooth curve into the teacher
+    // the labels tuck away first, then the two icons fly one after the other to different spots
+    tl.to(".o-prob span", { opacity: 0, duration: 0.15 }, 17.95);
+    tl.to("#o-p1", { x: 330, duration: 0.7, ease: "power1.in" }, 18.05);
+    tl.to("#o-p1", { y: 470, duration: 0.7, ease: "power2.out" }, 18.05);
+    tl.to("#o-p1", { scale: 0.4, opacity: 0, duration: 0.25, ease: "power2.in" }, 18.55);
+    tl.to("#o-p2", { x: 440, duration: 0.7, ease: "power1.in" }, 18.35);
+    tl.to("#o-p2", { y: 230, duration: 0.7, ease: "power2.out" }, 18.35);
+    tl.to("#o-p2", { scale: 0.4, opacity: 0, duration: 0.25, ease: "power2.in" }, 18.85);
+    // the teacher catches them, then a thumbs-up
+    tl.to("#o-teacher", { y: 14, duration: 0.1, ease: "power2.out" }, 19.05);
+    tl.to("#o-teacher", { y: 0, duration: 0.3, ease: "back.out(2)" }, 19.15);
+    tl.to("#o-thumb", { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, 19.2);
 
     tl.to("#o-stage", { x: -700, duration: 0.4, ease: "power3.in" }, DUR - 0.42);
 
