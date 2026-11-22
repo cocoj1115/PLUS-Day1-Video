@@ -11,14 +11,15 @@
     #t-board { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 1700px 400px; }
     #t-polaroid { position: absolute; left: 720px; top: 120px; width: 740px; padding: 22px 22px 86px; background: #ffffff; border-radius: 6px; box-shadow: 0 10px 0 rgba(0, 69, 77, 0.08); transform-origin: 50% 0%; }
     #t-photo { display: block; width: 696px; height: 331px; object-fit: cover; border-radius: 3px; }
-    #t-caption { position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; font-size: 36px; font-weight: 800; color: #00454d; }
+    #t-caption { position: absolute; left: 0; right: 0; bottom: 18px; height: 50px; display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 36px; font-weight: 800; color: #00454d; white-space: nowrap; }
+    #t-cmu { height: 31px; width: auto; display: block; }
     .t-tape { position: absolute; top: -16px; width: 130px; height: 38px; background: #fbe9b2; opacity: 0.9; border-radius: 4px; }
     #t-tape-l { left: -24px; transform: rotate(-16deg); }
     #t-tape-r { right: -24px; transform: rotate(14deg); }
 
     /* sticky notes around the photo */
     .t-note { position: absolute; width: 280px; height: 250px; padding: 20px 16px; border-radius: 6px; text-align: center; font-size: 37px; font-weight: 800; line-height: 1.15; color: #00454d; box-shadow: 0 8px 0 rgba(0, 69, 77, 0.07); }
-    .t-note svg { display: block; width: 92px; height: 92px; margin: 0 auto 10px; }
+    .t-ico { display: block; width: 84px; height: 84px; margin: 0 auto 8px; }
     #t-n1 { left: 1490px; top: 90px; background: #fbe9b2; }
     #t-n2 { left: 1520px; top: 370px; background: #d7eefd; }
     #t-n3 { left: 1150px; top: 600px; background: #f8dbef; }
@@ -30,12 +31,12 @@
     #t-yet-word { position: relative; }
 
     /* a mistake on paper, later fixed */
-    #t-paper { position: absolute; left: 560px; top: 520px; width: 440px; height: 150px; background: #ffffff; border: 4px solid #90c9f4; border-radius: 10px; transform-origin: 50% 50%; }
-    #t-sum { position: absolute; left: 36px; top: 38px; font-size: 60px; font-weight: 800; color: #00454d; white-space: nowrap; }
+    #t-paper { position: absolute; left: 540px; top: 520px; width: 500px; height: 150px; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 4px solid #90c9f4; border-radius: 10px; transform-origin: 50% 50%; }
+    #t-sum { position: relative; font-size: 60px; font-weight: 800; color: #00454d; white-space: nowrap; display: flex; align-items: center; gap: 18px; }
     #t-wrong { position: relative; display: inline-block; color: #be5052; }
-    #t-strike { position: absolute; left: 248px; top: 72px; width: 96px; height: 10px; background: #be5052; border-radius: 6px; transform-origin: 0% 50%; }
-    #t-right { position: absolute; left: 340px; top: 30px; font-size: 60px; font-weight: 800; color: #298c6b; }
-    #t-check { position: absolute; left: 960px; top: 470px; width: 96px; }
+    #t-strike { position: absolute; left: -6px; right: -6px; top: 50%; margin-top: -5px; height: 10px; background: #be5052; border-radius: 6px; transform-origin: 0% 50%; }
+    #t-right { display: inline-block; font-size: 60px; font-weight: 800; color: #298c6b; }
+    #t-check { position: absolute; left: 1056px; top: 545px; width: 100px; }
     .t-star { position: absolute; width: 60px; }
     #t-s1 { left: 130px; top: 560px; }
     #t-s2 { left: 470px; top: 600px; width: 46px; }
@@ -50,28 +51,26 @@
       <div id="t-board" data-layout-allow-overflow>
         <div id="t-polaroid">
           <img id="t-photo" src="assets/photos/plus-team.webp" alt="The PLUS tutor team" />
-          <div id="t-caption">PLUS tutors · Carnegie Mellon</div>
+          <div id="t-caption"><span>PLUS tutors from</span><img id="t-cmu" src="assets/brand/cmu-wordmark.svg" alt="Carnegie Mellon University" /></div>
           <span id="t-tape-l" class="t-tape"></span>
           <span id="t-tape-r" class="t-tape"></span>
         </div>
         <div id="t-n1" class="t-note">
-          <svg viewBox="0 0 100 100" fill="none" stroke="#00454d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="40" fill="#ffffff" /><circle cx="37" cy="42" r="4" fill="#00454d" stroke="none" /><circle cx="63" cy="42" r="4" fill="#00454d" stroke="none" /><path d="M34 60 Q50 74 66 60" /></svg>
+          <img class="t-ico" src="assets/doodles/smile.svg" alt="" />
           Gets to know you
         </div>
         <div id="t-n2" class="t-note">
-          <svg viewBox="0 0 100 100" fill="none" stroke="#00454d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20 Q12 10 22 10 L78 10 Q88 10 88 20 L88 62 Q88 72 78 72 L40 72 L22 90 L24 72 L22 72 Q12 72 12 62 Z" fill="#ffffff" /><path d="M40 32 Q40 22 50 22 Q60 22 60 31 Q60 38 50 42 L50 48" /><circle cx="50" cy="59" r="3" fill="#00454d" stroke="none" /></svg>
+          <img class="t-ico" src="assets/doodles/ask.svg" alt="" />
           Answers your questions
         </div>
         <div id="t-n3" class="t-note">
-          <svg viewBox="0 0 100 100" fill="none" stroke="#00454d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 78 L30 56 L70 16 L84 30 L44 70 Z" fill="#f5c263" /><path d="M22 78 L44 70" /><path d="M64 22 L78 36" /></svg>
+          <img class="t-ico" src="assets/doodles/pencil.svg" alt="" />
           Helps with tricky problems
         </div>
       </div>
 
       <div id="t-paper">
-        <div id="t-sum">7 × 8 = <span id="t-wrong">54</span></div>
-        <span id="t-strike"></span>
-        <div id="t-right">56</div>
+        <div id="t-sum"><span>7 × 8 =</span><span id="t-wrong">54<span id="t-strike"></span></span><span id="t-right">56</span></div>
       </div>
       <img id="t-check" src="assets/doodles/check.svg" alt="" />
 

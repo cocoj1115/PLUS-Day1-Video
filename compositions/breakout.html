@@ -19,24 +19,24 @@
     #b-roomgrp { position: absolute; inset: 0; transform-origin: 460px 190px; }
     #b-room { left: 460px; top: 190px; width: 1000px; height: 640px; }
     #b-empty .b-dot { margin: 0 8px; }
-    #b-empty { position: absolute; left: 520px; top: 170px; width: 440px; height: 330px; border: 5px dashed #90c9f4; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 60px; font-weight: 900; color: #367cb3; }
-    #b-me { position: absolute; left: 500px; top: 360px; width: 440px; height: 330px; transform-origin: 0 0; background: #fff5fb; border: 6px solid #f2acaa; border-radius: 18px; overflow: hidden; }
+    #b-empty { position: absolute; left: 520px; top: 100px; width: 440px; height: 330px; border: 5px dashed #90c9f4; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 60px; font-weight: 900; color: #367cb3; }
+    #b-me { position: absolute; left: 500px; top: 290px; width: 440px; height: 330px; transform-origin: 0 0; background: #fff5fb; border: 6px solid #f2acaa; border-radius: 18px; overflow: hidden; }
     #b-me img { transform-origin: 50% 100%; position: absolute; left: 0; right: 0; margin: 0 auto; top: 8%; height: 72%; }
     #b-me b { position: absolute; left: 12px; bottom: 8px; font-size: 32px; font-weight: 800; color: #00454d; background: #ffffff; border-radius: 8px; padding: 0 12px; }
-    #b-sticker { position: absolute; left: 820px; top: 700px; padding: 14px 30px 14px 20px; background: #a0cca3; border-radius: 40px; display: flex; align-items: center; gap: 14px; font-size: 40px; font-weight: 800; color: #00454d; white-space: nowrap; transform-origin: 50% 50%; }
+    #b-sticker { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; top: 690px; padding: 14px 30px 14px 20px; background: #a0cca3; border-radius: 40px; display: flex; align-items: center; gap: 14px; font-size: 40px; font-weight: 800; color: #00454d; white-space: nowrap; transform-origin: 50% 50%; }
     #b-sticker img { width: 54px; }
 
     /* the rooms map */
-    .b-mini { position: absolute; top: 220px; width: 360px; height: 230px; background: #ffffff; border: 6px solid #00454d; border-radius: 18px; overflow: hidden; }
-    .b-mini .b-bar { height: 34px; font-size: 20px; line-height: 30px; padding-left: 12px; border-bottom-width: 3px; }
-    .b-mini .b-mt { position: absolute; left: 20px; top: 50px; width: 160px; height: 120px; background: #f5fcff; border: 4px solid #90c9f4; border-radius: 10px; overflow: hidden; }
-    .b-mini .b-mt img { position: absolute; left: 0; right: 0; margin: 0 auto; top: 6%; height: 80%; }
+    .b-mini { position: absolute; top: 220px; width: 1000px; height: 640px; background: #ffffff; border: 6px solid #00454d; border-radius: 26px; overflow: hidden; transform-origin: 0 0; }
+    .b-mini .b-mt { position: absolute; left: 34px; top: 94px; width: 440px; height: 330px; background: #f5fcff; border: 6px solid #90c9f4; border-radius: 18px; overflow: hidden; }
+    .b-mini .b-mt img { position: absolute; left: 0; right: 0; margin: 0 auto; top: 8%; height: 72%; }
+    .b-mini .b-me2 { position: absolute; left: 514px; top: 94px; width: 440px; height: 330px; border: 5px dashed #90c9f4; border-radius: 18px; }
     #b-r1 { left: 120px; } #b-r2 { left: 560px; } #b-r4 { left: 1440px; }
     #b-path { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
     #b-guide { position: absolute; left: 230px; top: 470px; width: 150px; transform-origin: 50% 100%; }
-    #b-zoomin { position: absolute; left: 900px; top: 610px; width: 560px; height: 250px; background: #ffffff; border: 5px solid #00454d; border-radius: 22px; transform-origin: 50% 0%; }
-    #b-zoomin img { position: absolute; left: 24px; top: 30px; width: 200px; }
-    #b-work { position: absolute; left: 250px; top: 36px; font-size: 44px; font-weight: 800; color: #367cb3; line-height: 1.35; white-space: nowrap; }
+    #b-zoomin { position: absolute; left: 900px; top: 610px; width: 560px; height: 250px; display: flex; align-items: center; gap: 30px; padding: 0 34px; background: #ffffff; border: 5px solid #00454d; border-radius: 22px; transform-origin: 50% 0%; }
+    #b-zoomin img { width: 190px; flex: none; }
+    #b-work { position: relative; font-size: 44px; font-weight: 800; color: #367cb3; line-height: 1.35; white-space: nowrap; }
     #b-work div { clip-path: inset(0 100% 0 0); }
   </style>
 
@@ -59,9 +59,9 @@
 
       <!-- the rooms map (appears when the camera pulls back) -->
       <svg id="b-path" viewBox="0 0 1920 1080" fill="none"><path id="b-dots" d="M200 560 L1720 560" stroke="#367cb3" stroke-width="7" stroke-dasharray="4 22" stroke-linecap="round" /></svg>
-      <div id="b-r1" class="b-mini"><div class="b-bar" data-layout-ignore>Room 1</div><div class="b-mt"><img src="assets/brand/char-greater.png" alt="" /></div></div>
-      <div id="b-r2" class="b-mini"><div class="b-bar" data-layout-ignore>Room 2</div><div class="b-mt"><img src="assets/brand/char-flower.png" alt="" /></div></div>
-      <div id="b-r4" class="b-mini"><div class="b-bar" data-layout-ignore>Room 4</div><div class="b-mt"><img src="assets/brand/char-wave.png" alt="" /></div></div>
+      <div id="b-r1" class="b-mini" data-layout-ignore><div class="b-bar">Breakout room</div><div class="b-mt"><img src="assets/brand/char-greater.png" alt="" /></div><div class="b-me2"></div></div>
+      <div id="b-r2" class="b-mini" data-layout-ignore><div class="b-bar">Breakout room</div><div class="b-mt"><img src="assets/brand/char-flower.png" alt="" /></div><div class="b-me2"></div></div>
+      <div id="b-r4" class="b-mini" data-layout-ignore><div class="b-bar">Breakout room</div><div class="b-mt"><img src="assets/brand/char-wave.png" alt="" /></div><div class="b-me2"></div></div>
       <img id="b-guide" src="assets/brand/char-equals.png" alt="tutor" data-layout-allow-overflow />
 
       <div id="b-roomgrp">
@@ -95,11 +95,11 @@
     S(".b-dot", { opacity: 0 });
     S("#b-rb-hl", { scaleX: 0 });
     S("#b-me img", { rotation: 0, y: 0 });
-    // "You" starts exactly in the main-room grid's centre slot (x 760, y 437, ~400×227); its home slot in the room is x 500, y 360
-    S("#b-me", { x: 260, y: 77, scale: 0.9, opacity: 1 });
+    // "You" starts exactly in the main-room grid's centre slot (x 760, y 437, ~400×227); its home slot in the room is x 500, y 290
+    S("#b-me", { x: 260, y: 147, scale: 0.9, opacity: 1 });
     S("#b-sticker", { opacity: 0, scale: 1.5, rotation: -8 });
     S("#b-roomgrp", { x: 0, y: 0, scale: 1 });
-    S(".b-mini", { opacity: 0, scale: 0.6, borderColor: "#00454d" });
+    S(".b-mini", { opacity: 0, scale: 0.22, borderColor: "#00454d" });
     S("#b-path", { clipPath: "inset(0 100% 0 0)" });
     S("#b-guide", { opacity: 0, x: 0, y: 0 });
     S("#b-zoomin", { opacity: 0, scale: 0.5 });
@@ -131,7 +131,7 @@
     tl.to("#b-sticker", { opacity: 0, duration: 0.25 }, 10.6);
     tl.to("#b-roomgrp", { x: 540, y: 30, scale: 0.36, duration: 0.9, ease: "power2.inOut" }, 10.0);
     tl.to("#b-room-bar", { opacity: 1, duration: 0.01 }, 10.0);
-    tl.to(".b-mini", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)", stagger: 0.12 }, 10.9);
+    tl.to(".b-mini", { opacity: 1, scale: 0.36, duration: 0.4, ease: "back.out(1.6)", stagger: 0.12 }, 10.9);
     tl.to("#b-path", { clipPath: "inset(0 0% 0 0)", duration: 0.8, ease: "power2.inOut" }, 11.45);
     tl.to("#b-guide", { opacity: 1, duration: 0.25 }, 11.85);
     tl.to("#b-r1", { borderColor: "#367cb3", duration: 0.2 }, 11.95);

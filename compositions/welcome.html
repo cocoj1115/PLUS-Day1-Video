@@ -21,11 +21,11 @@
     /* hand-drawn laptop: the screen is x 62–640, y 18–380 inside this 700×470 box */
     #w-laptop { position: absolute; left: 610px; top: 330px; width: 700px; height: 470px; }
     #w-laptop svg { position: absolute; inset: 0; overflow: visible; }
-    #w-math { position: absolute; left: 80px; width: 380px; top: 205px; text-align: center; font-size: 66px; font-weight: 800; color: #367cb3; letter-spacing: 0.02em; white-space: nowrap; }
+    #w-math { position: absolute; left: 62px; width: 578px; top: 236px; text-align: center; font-size: 66px; font-weight: 800; color: #367cb3; letter-spacing: 0.02em; white-space: nowrap; }
     #w-math span { display: inline-block; }
     /* the tutor joins as a video tile, fully inside the screen */
     #w-tutor { position: absolute; left: 468px; top: 46px; width: 150px; height: 150px; border-radius: 18px; background: #d7eefd; border: 5px solid #90c9f4; overflow: hidden; transform-origin: 50% 50%; }
-    #w-tutor img { position: absolute; left: 12px; top: 10px; width: 116px; }
+    #w-tutor img { position: absolute; left: 0; right: 0; margin: 0 auto; top: 12px; width: 112px; }
     #w-tutor-label { position: absolute; left: 0; right: 0; bottom: 4px; text-align: center; font-size: 28px; font-weight: 700; color: #00454d; }
     #w-bubble { position: absolute; left: 352px; top: 58px; padding: 6px 18px; background: #ffffff; border: 4px solid #00454d; border-radius: 22px 22px 6px 22px; font-size: 32px; font-weight: 800; color: #00454d; transform-origin: 100% 100%; white-space: nowrap; }
   </style>
@@ -48,11 +48,11 @@
       </div>
 
       <div id="w-laptop">
-        <svg viewBox="0 0 700 470" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 700 470" fill="none" stroke-linecap="round" stroke-linejoin="round"><defs><filter id="w-crayon" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
           <path d="M62 18 Q350 10 640 20 Q648 190 642 382 Q350 388 58 380 Q52 200 62 18 Z" fill="#ffffff" stroke="none" />
-          <path id="w-screen-line" d="M62 18 Q350 10 640 20 Q648 190 642 382 Q350 388 58 380 Q52 200 62 18 Z" stroke="#00454d" stroke-width="7" />
-          <path id="w-base-line" d="M18 384 Q350 380 684 386 L700 432 Q350 446 2 430 Z" stroke="#00454d" stroke-width="7" fill="#f9f5ef" />
-          <path id="w-notch" d="M300 400 Q350 404 400 400" stroke="#00454d" stroke-width="6" />
+          <path id="w-screen-line" d="M62 18 C253.9665876235813 11.817844559128087, 445.1747136718283 15.27031949100395, 638.0062039103359 21.468955824151635 M62.25881691835821 19.35146606899798 C252.9318221178837 12.052119031331193, 447.23776138794295 12.846624062241364, 640.71140909167 21.428264005761594 M640 20 C645.9777842567613 133.62385812339681, 645.922141155228 255.6757040116936, 640.4841522779316 382.51460803486407 M639.9083484616131 19.888590523973107 C644.7333071785358 131.070815102042, 645.1824573365041 253.79809038517996, 639.876160111744 382.3247539925389 M642 382 C446.1187727854898 385.9477950427681, 252.68117612662414 385.7194749408712, 58.88781132362783 379.5404028389603 M641.4415374603122 380.4547467324883 C448.94385516516246 387.499344222527, 251.11163226735468 385.06784414428597, 59.24145253272727 381.9552072781138 M58 380 C53.628017565235496 260.03589148260653, 55.851090233152114 139.976644485568, 62.149004777893424 18.60963369347155 M59.27262951992452 379.09955627657473 C55.35449696155265 258.5228311079554, 55.51374544970071 140.2066025026453, 60.48318051965907 17.80686446307227 M62 18 C62 18, 62 18, 62 18 M62 18 C62 18, 62 18, 62 18" stroke="#00454d" stroke-width="6" filter="url(#w-crayon)" />
+          <path d="M18 384 Q350 380 684 386 L700 432 Q350 446 2 430 Z" fill="#f9f5ef" stroke="none" /><path id="w-base-line" d="M18 384 C237.7052338210245 379.34177467351157, 462.80526507770026 381.61723233386874, 682.0062938220799 387.80908561870456 M17.421988178044558 382.79134238883853 C241.01634127901247 381.2098792105292, 459.0793714563673 380.20623697135596, 685.0217193683609 384.21563015077265 M683.9179237000644 384.0949258096516 C688.0493048640042 398.7230463602096, 691.4292263628989 408.4083639521599, 701.3589512221515 433.934444475919 M684.0590347293764 385.6654217299074 C689.5007081630528 403.18191490668056, 696.5563987347185 421.79915515865383, 699.0355624798685 431.63646573387086 M700 432 C466.5511849808196 442.9168758106728, 233.17892365530133 442.4904317172865, 1.6748793609440327 428.10163212940097 M698.9627584703267 431.3141211383045 C467.23738304978855 440.9838630109404, 232.91806777324527 438.5161489893372, 1.9326871594414117 428.3418733963743 M0.5519619099795818 431.75335662439466 C7.427038809403777 416.03663197003306, 10.364098942026496 402.22512841254473, 19.87751854583621 385.697726059705 M2.726480269804597 429.929103737697 C5.3197654950618745 418.36253813865784, 10.118081684708596 406.99032385523617, 17.148621881380677 383.12683612667024" stroke="#00454d" stroke-width="6" filter="url(#w-crayon)" />
+          <path id="w-notch" d="M300 400 C333.79966134441395 403.1860895394037, 366.92815655680994 403.4451537727068, 398.80383024029436 398.8895292479545 M299.15109566263857 400.13873122520744 C333.23384959741804 402.88725030050307, 366.3792555815416 403.566176594949, 400.79921778703107 399.7617977774702" stroke="#00454d" stroke-width="5" filter="url(#w-crayon)" />
         </svg>
         <div id="w-math"><span>3x</span> <span>+</span> <span>5</span> <span>=</span> <span>20</span></div>
         <div id="w-tutor">
@@ -77,7 +77,7 @@
     S("#w-hl", { scaleX: 0 });
     S(".w-char", { y: 340, rotation: 0 });
     S("#w-laptop", { opacity: 0, y: 60 });
-    S(["#w-screen-line", "#w-base-line", "#w-notch"], { strokeDasharray: 2200, strokeDashoffset: 2200 });
+    S(["#w-screen-line", "#w-base-line", "#w-notch"], { strokeDasharray: 4400, strokeDashoffset: 4400 });
     S("#w-math span", { opacity: 0, y: 24, filter: "blur(6px)" });
     S("#w-tutor", { opacity: 0, scale: 0.6 });
     S("#w-bubble", { opacity: 0, scale: 0.5 });

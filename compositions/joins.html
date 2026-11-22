@@ -5,16 +5,16 @@
     #j-win { position: absolute; left: 360px; top: 110px; width: 1200px; height: 780px; background: #ffffff; border: 6px solid #00454d; border-radius: 26px; overflow: hidden; }
     .j-bar { height: 64px; background: #d7eefd; border-bottom: 4px solid #00454d; font-size: 36px; font-weight: 800; color: #00454d; line-height: 60px; padding-left: 26px; }
 
-    .j-tile { position: absolute; top: 250px; width: 520px; height: 380px; border-radius: 20px; overflow: hidden; transform-origin: 50% 50%; }
+    .j-tile { position: absolute; top: 290px; width: 520px; height: 380px; border-radius: 20px; overflow: hidden; transform-origin: 50% 50%; }
     .j-tile img { position: absolute; left: 0; right: 0; margin: 0 auto; top: 8%; height: 74%; transform-origin: 50% 100%; }
     .j-tile b { position: absolute; left: 14px; bottom: 10px; font-size: 34px; font-weight: 800; color: #00454d; background: #ffffff; border-radius: 10px; padding: 0 14px; }
     #j-me { left: 410px; background: #fff5fb; border: 6px solid #f2acaa; }
     #j-tut { left: 990px; background: #d7eefd; border: 6px solid #90c9f4; }
-    .j-hi { position: absolute; top: 276px; padding: 8px 24px; background: #ffffff; border: 5px solid #00454d; border-radius: 26px 26px 26px 6px; font-size: 40px; font-weight: 800; color: #00454d; transform-origin: 0% 100%; }
+    .j-hi { position: absolute; top: 316px; padding: 8px 24px; background: #ffffff; border: 5px solid #00454d; border-radius: 26px 26px 26px 6px; font-size: 40px; font-weight: 800; color: #00454d; transform-origin: 0% 100%; }
     #j-hi1 { left: 760px; }
     #j-hi2 { left: 1030px; border-radius: 26px 26px 6px 26px; transform-origin: 100% 100%; }
-    #j-waves { position: absolute; left: 860px; top: 660px; width: 200px; height: 90px; }
-    #j-ok { position: absolute; left: 1065px; top: 665px; width: 80px; }
+    #j-waves { position: absolute; left: 860px; top: 682px; width: 200px; height: 90px; }
+    #j-ok { position: absolute; left: 1065px; top: 688px; width: 80px; }
 
     #j-toolbar { position: absolute; left: 366px; top: 790px; width: 1188px; height: 94px; background: #f5fcff; border-top: 4px solid #00454d; display: flex; align-items: center; justify-content: center; gap: 26px; }
     .j-btn { padding: 10px 26px; border-radius: 16px; border: 4px solid #00454d; background: #ffffff; font-size: 30px; font-weight: 800; color: #00454d; white-space: nowrap; }
@@ -25,7 +25,7 @@
     #j-screen-k { position: absolute; left: 24px; top: 14px; font-size: 28px; font-weight: 800; color: #ecad43; }
     #j-steps { position: absolute; left: 70px; top: 90px; font-size: 64px; font-weight: 800; color: #00454d; line-height: 1.55; }
     #j-steps div { white-space: nowrap; }
-    #j-ring { position: absolute; left: 30px; top: 300px; width: 380px; height: 150px; overflow: visible; }
+    #j-ring { position: absolute; left: 15px; top: 272px; width: 300px; height: 130px; overflow: visible; }
     #j-note { position: absolute; left: 470px; top: 330px; width: 230px; padding: 16px; background: #f8dbef; border-radius: 6px; text-align: center; font-size: 34px; font-weight: 800; color: #00454d; transform-origin: 0% 50%; }
   </style>
 
@@ -36,10 +36,7 @@
       <div id="j-tut" class="j-tile"><img src="assets/brand/char-equals.png" alt="tutor" /><b data-layout-ignore>Tutor</b></div>
       <div id="j-hi1" class="j-hi">Hi!</div>
       <div id="j-hi2" class="j-hi">Hi!</div>
-      <svg id="j-waves" viewBox="0 0 200 90" fill="none" stroke="#367cb3" stroke-width="7" stroke-linecap="round">
-        <path class="j-w" d="M20 25 Q35 45 20 65" /><path class="j-w" d="M45 15 Q68 45 45 75" />
-        <path class="j-w" d="M180 25 Q165 45 180 65" /><path class="j-w" d="M155 15 Q132 45 155 75" />
-      </svg>
+      <img id="j-waves" src="assets/doodles/waves.svg" alt="" />
       <img id="j-ok" src="assets/doodles/check.svg" alt="" />
 
       <div id="j-toolbar">
@@ -50,7 +47,7 @@
       <div id="j-screen" data-layout-allow-overflow>
         <div id="j-screen-k">Your screen</div>
         <div id="j-steps"><div id="j-l1">3x + 5 = 20</div><div id="j-l2">3x = 15</div><div id="j-l3">x = ?</div></div>
-        <svg id="j-ring" viewBox="0 0 380 150" fill="none"><path id="j-ring-p" d="M60 30 C 160 -6 340 10 352 70 C 362 130 160 150 70 128 C 10 112 10 60 64 34" stroke="#be5052" stroke-width="7" stroke-linecap="round" /></svg>
+        <svg id="j-ring" viewBox="0 0 380 150" preserveAspectRatio="none" fill="none"><defs><filter id="j-crayon" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs><path id="j-ring-p" d="M267.3322778578177 24.388009270518424 C282.84250159928337 26.607126954860696, 295.28730179238954 30.10692353284425, 306.45644038390486 34.88536997218139 C317.6255789754202 39.663816411518525, 328.19736398574076 46.536334099522904, 334.34710940690957 53.05868790654125 C340.49685482807837 59.5810417135596, 343.54152724118427 67.67333328913014, 343.3549129109177 74.01949281429148 C343.1682985806511 80.36565233945282, 339.73044370076144 85.4696418797195, 333.2274234253101 91.13564505750927 C326.7244031498588 96.80164823529903, 315.96787092507117 102.92288537757086, 304.3367912582097 108.01551188103008 C292.70571159134823 113.1081383844893, 278.09789338676217 118.33264165568946, 263.44094542414126 121.69140407826458 C248.78399746152036 125.05016650083971, 232.99185306422353 127.13225579675172, 216.39510348248436 128.1680864164808 C199.79835390074518 129.20391703620987, 181.11274992628765 128.99777469060143, 163.86044793370618 127.90638779663907 C146.60814594112472 126.8150009026767, 128.12171351409643 124.74213412362576, 112.88129152699562 121.61976505270661 C97.64086953989482 118.49739598178746, 83.61019538274768 114.17921751503086, 72.41791601110134 109.17217337112422 C61.22563663945501 104.16512922721758, 51.31715799255809 97.62074702963068, 45.72761529711764 91.57750018926679 C40.13807260167719 85.5342533489029, 38.65499146410432 79.41442302872377, 38.88065983845863 72.91269232894086 C39.10632821281293 66.41096162915795, 41.354775426178364 59.14283463009, 47.08162554324346 52.56711599056928 C52.80847566030856 45.991397351048555, 61.95240075568127 38.244749556616085, 73.24176054084921 33.458380491816534 C84.53112032601716 28.67201142701698, 99.74134808413108 26.625733164463444, 114.81778425425114 23.84890160177195 C129.8942204243712 21.072070039080455, 146.85242387063855 18.359666933455728, 163.7003775615696 16.797391115667565 C180.54833125250067 15.235115297879405, 193.55882672733125 11.716283372447107, 215.90550639983746 14.475246695042983 C238.25218607234368 17.23421001763886, 280.18963932060086 28.13616160545349, 297.7804555966068 33.35117105124282 C315.3712718726128 38.56618049703215, 323.03495093170034 45.50386421168667, 321.45040405587315 45.76530336977896 M91.65243826433685 30.625594564339842 C102.79186026666778 25.35259373634108, 121.92008436523847 19.26664477948521, 138.06380867670484 16.443664711843027 C154.2075329881712 13.620684644200846, 171.5568496296068 13.220038810054787, 188.51478413313512 13.687714158486756 C205.47271863666344 14.155389506918725, 223.12076468145182 16.611791264590632, 239.81141569787485 19.249716802434847 C256.5020667142979 21.88764234027906, 275.0995569745122 25.313005505614885, 288.65869023167335 29.51526738555205 C302.2178234888345 33.71752926548922, 312.4988179794534 39.00586133389373, 321.16621524084167 44.463288082057844 C329.8336125022299 49.920714830221954, 337.90049996803725 55.748940823162165, 340.6630738000031 62.25982787453672 C343.4256476319689 68.77071492591128, 340.7736840460819 77.02662689037291, 337.7416582326366 83.52861039030516 C334.70963241919134 90.03059389023741, 330.56998253438115 96.05852419108814, 322.47091891933155 101.27172887413022 C314.37185530428195 106.4849335571723, 302.3619150728503 110.93761235138531, 289.147276542339 114.80783848855762 C275.9326380118277 118.67806462572993, 259.8135989854438 121.76237600381997, 243.18308773626376 124.49308569716405 C226.55257648708377 127.22379539050813, 206.70538129416502 130.92888258131313, 189.364209047259 131.1920966486221 C172.023036800353 131.4553107159311, 155.0637180390424 128.9536097143322, 139.13605425482763 126.07237010101801 C123.20839047061285 123.19113048770383, 107.5710966100873 117.80617669660508, 93.79822634197035 113.90465896873701 C80.0253560738534 110.00314124086894, 65.54526538038414 107.74200138361554, 56.498832646125976 102.66326373380959 C47.45239991186781 97.58452608400363, 42.58073692192111 90.03697435787859, 39.51962993642135 83.43223306990126 C36.4585229509216 76.82749178192392, 35.1380199726302 69.63806035869155, 38.13219073312746 63.03481600594557 C41.12636149362472 56.4315716531996, 48.54821705546739 49.753877386742154, 57.48465449940491 43.812766953425424 C66.42109194334243 37.871656520108694, 85.75523020454602 29.816815761389798, 91.7508153967526 27.388153406045184 C97.74640058895918 24.95949105070057, 91.58982244884389 28.48897111462499, 93.45816565264437 29.240792821357743" stroke="#be5052" stroke-width="6" stroke-linecap="round" filter="url(#j-crayon)" /></svg>
         <div id="j-note">Stuck here!</div>
       </div>
       <img id="j-cursor" src="assets/doodles/cursor.svg" alt="" />
@@ -69,14 +66,14 @@
     S("#j-me", { x: 0, y: 0, scale: 1 });
     S("#j-tut", { opacity: 0, x: 400, y: 0, scale: 1 });
     S(".j-hi", { opacity: 0, scale: 0.4 });
-    S(".j-w", { opacity: 0 });
+    S("#j-waves", { opacity: 0, scale: 0.6 });
     S("#j-ok", { opacity: 0, scale: 0.3 });
     S("#j-toolbar", { y: 110, opacity: 0 });
     S("#j-share", { scale: 1 });
     S("#j-cursor", { opacity: 0, x: 1500, y: 980, scale: 1 });
     S("#j-screen", { opacity: 0, scale: 0.15 });
     S(["#j-l2", "#j-l3"], { opacity: 0, x: -20 });
-    S("#j-ring-p", { strokeDasharray: 1000, strokeDashoffset: 1000 });
+    S("#j-ring-p", { strokeDasharray: 2400, strokeDashoffset: 2400 });
     S("#j-note", { opacity: 0, scale: 0.4, rotation: 4 });
 
     tl.to("#j-stage", { x: 0, duration: 0.55, ease: "power3.out" }, 0);
@@ -91,7 +88,7 @@
 
     // "Make sure you can hear each other" — sound goes both ways, then a check
     tl.to(".j-hi", { opacity: 0, duration: 0.2 }, 2.6);
-    tl.to(".j-w", { opacity: 1, duration: 0.15, stagger: 0.12 }, 2.95);
+    tl.to("#j-waves", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 2.95);
     tl.to("#j-ok", { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, 3.6);
 
     // "Then share your screen" — toolbar, cursor clicks Share Screen
@@ -105,8 +102,8 @@
     tl.to("#j-share", { scale: 1, duration: 0.2, ease: "back.out(2)" }, 5.06);
     // "...so they can see your math" — your work opens up; the video tiles move aside
     tl.to("#j-cursor", { opacity: 0, duration: 0.2 }, 5.3);
-    tl.to("#j-me", { x: 690, y: -140, scale: 0.42, duration: 0.6, ease: "power3.inOut" }, 5.15);
-    tl.to("#j-tut", { x: 110, y: 30, scale: 0.42, duration: 0.6, ease: "power3.inOut" }, 5.15);
+    tl.to("#j-me", { x: 690, y: -180, scale: 0.42, duration: 0.6, ease: "power3.inOut" }, 5.15);
+    tl.to("#j-tut", { x: 110, y: -10, scale: 0.42, duration: 0.6, ease: "power3.inOut" }, 5.15);
     tl.to("#j-screen", { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.2)" }, 5.25);
 
     // "Show them what you've tried" — the steps appear

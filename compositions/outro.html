@@ -3,20 +3,20 @@
     #root { position: absolute; inset: 0; overflow: hidden; font-family: "DM Sans", sans-serif; }
     #e-stage { position: absolute; inset: 0; }
 
-    .e-stone { position: absolute; height: 96px; border-radius: 50%; background: #fbe9b2; border: 5px solid #ecad43; display: flex; align-items: center; justify-content: flex-end; padding-right: 40px; font-size: 40px; font-weight: 900; color: #00454d; white-space: nowrap; transform-origin: 50% 100%; }
+    .e-stone { position: absolute; height: 96px; background: url("assets/doodles/stone.svg") center / 100% 100% no-repeat; display: flex; align-items: center; justify-content: center; padding-top: 4px; font-size: 40px; font-weight: 900; color: #00454d; white-space: nowrap; transform-origin: 50% 100%; }
     #e-st1 { left: 330px; top: 820px; width: 390px; }
     #e-st2 { left: 780px; top: 760px; width: 320px; }
-    #e-st3 { left: 1170px; top: 700px; width: 580px; font-size: 38px; }
+    #e-st3 { left: 1150px; top: 700px; width: 560px; font-size: 38px; }
 
     .e-char { position: absolute; transform-origin: 50% 100%; }
     #e-pink { left: 70px; top: 796px; width: 230px; }
-    #e-tut { left: 1640px; bottom: 120px; width: 220px; }
+    #e-tut { left: 1700px; bottom: 120px; width: 200px; }
     #e-greater { left: 60px; bottom: 120px; width: 200px; }
     #e-flower { left: 640px; bottom: 120px; width: 150px; }
     #e-wave { left: 1120px; bottom: 120px; width: 140px; }
     #e-divide { left: 1480px; bottom: 120px; width: 150px; }
     #e-flag { position: absolute; left: 1700px; top: 360px; width: 150px; transform-origin: 20% 100%; }
-    #e-flag-label { position: absolute; left: 1732px; top: 385px; font-size: 34px; font-weight: 900; color: #00454d; }
+    #e-flag-label { position: absolute; left: 1734px; width: 96px; text-align: center; top: 386px; font-size: 32px; font-weight: 900; color: #00454d; }
 
     #e-title { position: absolute; left: 0; right: 0; top: 150px; display: flex; justify-content: center; gap: 32px; }
     #e-title span { font-size: 132px; font-weight: 900; color: #00454d; letter-spacing: -0.02em; line-height: 1; }
@@ -78,13 +78,13 @@
     };
     // "Keep practicing"
     tl.to("#e-st1", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 0.55);
-    hop(235, -120, 0.95);
+    hop(340, -132, 0.95);
     // "ask questions"
     tl.to("#e-st2", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 1.55);
-    hop(685, -180, 1.95);
+    hop(755, -192, 1.95);
     // "take it one step at a time"
     tl.to("#e-st3", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 3.2);
-    hop(1075, -240, 3.65);
+    hop(1245, -252, 3.65);
 
     // "Your tutor is here to help you reach your goals"
     tl.to("#e-tut", { y: 0, duration: 0.5, ease: "back.out(1.5)" }, 4.85);
@@ -100,8 +100,8 @@
     const crowd = ["#e-greater", "#e-wave", "#e-divide", "#e-tut"];
     tl.to(crowd, { y: -45, duration: 0.25, ease: "power2.out", stagger: 0.06 }, 7.7);
     tl.to(crowd, { y: 0, duration: 0.3, ease: "power2.in", stagger: 0.06 }, 7.95);
-    tl.to("#e-pink", { y: -300, duration: 0.25, ease: "power2.out" }, 7.7);
-    tl.to("#e-pink", { y: -240, duration: 0.3, ease: "power2.in" }, 7.95);
+    tl.to("#e-pink", { y: -312, duration: 0.25, ease: "power2.out" }, 7.7);
+    tl.to("#e-pink", { y: -252, duration: 0.3, ease: "power2.in" }, 7.95);
     tl.to("#e-logo", { opacity: 1, y: 0, duration: 0.4, ease: OUT }, 7.9);
 
     window.__timelines["outro"] = tl;

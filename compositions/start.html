@@ -33,10 +33,10 @@
     .s-tile.tut { background: #d7eefd; }
     .s-tile b { position: absolute; left: 4px; bottom: 2px; font-size: 13px; font-weight: 800; color: #00454d; background: #ffffff; border-radius: 4px; padding: 0 4px; }
     #s-eq { position: absolute; left: 0; right: 0; top: 120px; text-align: center; font-size: 46px; font-weight: 800; color: #367cb3; }
-    .s-ok { position: absolute; width: 70px; }
-    #s-ok1 { left: 400px; top: 10px; }
-    #s-ok2 { left: 840px; top: 10px; }
-    #s-main-label { position: absolute; left: 760px; width: 400px; top: 52px; text-align: center; background: #f9f5ef; border-radius: 40px; padding: 4px 0; font-size: 56px; font-weight: 900; color: #00454d; }
+    .s-ok { position: absolute; width: 76px; }
+    #s-ok1 { left: 222px; top: -96px; }
+    #s-ok2 { left: 662px; top: -96px; }
+    #s-main-label { position: absolute; left: 760px; width: 400px; top: 40px; text-align: center; background: #f9f5ef; border-radius: 40px; padding: 4px 0; font-size: 56px; font-weight: 900; color: #00454d; }
   </style>
 
   <div id="root" data-composition-id="start" data-width="1920" data-height="1080">
@@ -49,10 +49,10 @@
       <div id="s-card"><div id="s-card-k">Zoom link</div><div id="s-card-v">zoom.us/j/plus</div></div>
 
       <div id="s-laptop">
-        <svg viewBox="0 0 940 640" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 940 640" fill="none" stroke-linecap="round" stroke-linejoin="round" overflow="visible"><defs><filter id="s-crayon" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
           <path d="M14 8 Q470 0 926 10 Q934 260 928 410 Q470 418 10 410 Q6 220 14 8 Z" fill="#ffffff" stroke="none" />
-          <path id="s-scr" d="M14 8 Q470 0 926 10 Q934 260 928 410 Q470 418 10 410 Q6 220 14 8 Z" stroke="#00454d" stroke-width="7" />
-          <path id="s-base" d="M-20 414 Q470 410 960 416 L978 462 Q470 476 -38 460 Z" stroke="#00454d" stroke-width="7" fill="#f9f5ef" />
+          <path id="s-scr" d="M14 8 C317.1825262159109 2.3896349022785826, 621.3997012227774 2.311058019598325, 924.0064736455679 8.489345207810402 M15.74833069741726 9.67109502851963 C315.98537960127 3.5253995689253013, 623.2959249265492 3.525462789585193, 927.6423399217426 10.990362440794707 M926 10 C932.6144995143017 175.83938818673292, 930.4404951184988 311.1398650556803, 928.5921588987112 410.1021996885538 M924.4261027425528 8.405485764145851 C930.007219084849 177.4057780774931, 932.0469120033085 311.28931170627476, 927.0838192470371 409.4388737313449 M928 410 C622.5297339210908 413.4527716388305, 316.07311132053536 415.82322022815544, 8.578585729002953 408.9117247015238 M927.3302999585867 410.90930093824863 C623.6472111868362 413.1978664351006, 316.9440220760803 417.5563011360665, 10.99542872980237 408.7402162902057 M10 410 C7.901699488361677 282.93600270648795, 9.119978214303654 151.13504931827387, 14.590265855193138 8.723096027970314 M8.632309064269066 410.190841332078 C8.446721467127404 281.291939706852, 9.754922788093488 148.544570727398, 14.11723184660077 8.898467265814542 M14 8 C14 8, 14 8, 14 8 M14 8 C14 8, 14 8, 14 8" stroke="#00454d" stroke-width="6" filter="url(#s-crayon)" />
+          <path d="M-20 414 Q470 410 960 416 L978 462 Q470 476 -38 460 Z" fill="#f9f5ef" stroke="none" /><path id="s-base" d="M-20 414 C308.25450574668747 409.91356501666206, 631.6969192953159 412.6579708624631, 958.0065635573119 414.8294750023633 M-19.08849804289639 413.1109713483602 C307.40323209573205 412.68315974812333, 631.80420166164 410.8850756986998, 961.9526501984335 413.77772858580573 M958.8001204300672 416.6132797729224 C965.8155292782634 432.0261703490168, 974.6640730471984 449.09228726633637, 978.5886205602437 463.30306352488697 M960.904421932064 415.35108266118914 C965.7530223519132 430.9438707156852, 971.4718977870941 445.3304212641716, 978.9799437290058 462.86374283675104 M978 462 C638.6700452895213 469.7561704882731, 301.4389727643381 470.6543073623131, -38.539054380729795 459.3059877920896 M977.4040195476264 461.42758347280324 C639.8299375614461 472.31602856855216, 301.1483659159082 469.77112680316594, -36.98591196229681 457.8436679705046 M-39.938668293878436 458.54278619401157 C-32.352568313807254 443.3874225878716, -23.355885819114746 422.0697117350623, -20.984873516485095 413.1704857479781 M-37.456670575775206 459.0546367550269 C-33.61991906153411 450.70884201785174, -30.495635255858303 439.0378185508549, -20.273580037988722 414.0179862463847" stroke="#00454d" stroke-width="6" filter="url(#s-crayon)" />
         </svg>
         <div id="s-zoom" class="s-win">
           <div class="s-bar" data-layout-ignore>Zoom</div>
@@ -103,10 +103,11 @@
     S("#s-card", { opacity: 0, scale: 0.4 });
     S("#s-cursor", { opacity: 0, x: 980, y: 980 });
     S("#s-laptop", { opacity: 0, y: 50 });
-    S(["#s-scr", "#s-base"], { strokeDasharray: 3200, strokeDashoffset: 3200 });
+    S(["#s-scr", "#s-base"], { strokeDasharray: 6400, strokeDashoffset: 6400 });
     S(".s-win", { opacity: 0, scale: 0.6 });
     S("#s-grid3", { opacity: 0 });
     S(".s-ok", { opacity: 0, scale: 0.3 });
+    S("#s-laptop > svg", { opacity: 1 });
     S("#s-main-label", { opacity: 0, filter: "blur(8px)" });
     S("#s-grid3 .tut img", { rotation: 0 });
 
@@ -146,7 +147,8 @@
     // "You'll start in the main Zoom room" — the camera pushes into the Zoom window
     tl.to(["#s-label", "#s-pink", "#s-phones", "#s-teacher", "#s-card"], { opacity: 0, duration: 0.3 }, 9.5);
     tl.to([".s-ok", "#s-math"], { opacity: 0, duration: 0.25 }, 9.6);
-    tl.to("#s-stage", { scale: 2.3, x: -150, y: 175, duration: 1.0, ease: "power2.inOut" }, 9.7);
+    tl.to(["#s-laptop > svg"], { opacity: 0, duration: 0.4 }, 9.7);
+    tl.to("#s-stage", { scale: 2.4, x: -150, y: 215, duration: 1.0, ease: "power2.inOut" }, 9.7);
     tl.to("#s-grid2", { opacity: 0, duration: 0.3 }, 10.2);
     tl.to("#s-grid3", { opacity: 1, duration: 0.3 }, 10.2);
     tl.to("#s-main-label", { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: OUT }, 10.75);

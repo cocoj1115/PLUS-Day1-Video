@@ -6,3 +6,4 @@ assets/voice/samples/**/*.wav
 renders/
 .hyperframes/
 node_modules/
+tools/node/node_modules/
