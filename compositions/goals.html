@@ -1,0 +1,112 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "DM Sans", sans-serif; }
+    #g-stage { position: absolute; inset: 0; }
+    .g-char { position: absolute; transform-origin: 50% 100%; }
+    #g-pink { left: 80px; bottom: 120px; width: 320px; }
+    #g-teacher { left: 1530px; bottom: 120px; width: 200px; }
+
+    #g-pad { position: absolute; left: 500px; top: 150px; width: 900px; height: 620px; background: #ffffff; border: 5px solid #00454d; border-radius: 22px; transform-origin: 50% 50%; }
+    #g-rings { position: absolute; left: 60px; top: -26px; width: 780px; height: 52px; }
+    #g-head { position: absolute; left: 60px; top: 60px; font-size: 56px; font-weight: 900; color: #00454d; }
+    #g-head-hl { position: absolute; left: -8px; right: -10px; bottom: 4px; height: 24px; background: #a0cca3; opacity: 0.6; border-radius: 14px 6px 16px 8px; transform-origin: 0% 50%; }
+    #g-head span { position: relative; }
+    .g-row { position: absolute; left: 60px; width: 780px; height: 170px; }
+    #g-row1 { top: 175px; }
+    #g-row2 { top: 380px; }
+    .g-row img { position: absolute; left: 0; top: 0; width: 84px; }
+    .g-text { position: absolute; left: 110px; top: 8px; font-size: 52px; font-weight: 800; color: #00454d; white-space: nowrap; clip-path: inset(0 100% 0 0); }
+    .g-track { position: absolute; left: 110px; top: 98px; width: 560px; height: 34px; border-radius: 18px; background: #deefde; border: 3px solid #a0cca3; overflow: hidden; }
+    .g-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: #5c9c62; transform-origin: 0% 50%; }
+    #g-stamp { position: absolute; left: 700px; top: 70px; width: 110px; }
+
+    #g-snack { position: absolute; left: 1560px; top: 520px; width: 150px; transform-origin: 50% 50%; }
+    #g-snack-label { position: absolute; left: 1420px; top: 300px; padding: 10px 22px; background: #f8dbef; border-radius: 6px; font-size: 38px; font-weight: 800; color: #00454d; white-space: nowrap; }
+    .g-star { position: absolute; width: 56px; }
+    #g-s1 { left: 1440px; top: 470px; } #g-s2 { left: 1740px; top: 420px; width: 44px; } #g-s3 { left: 1700px; top: 640px; width: 40px; }
+  </style>
+
+  <div id="root" data-composition-id="goals" data-width="1920" data-height="1080">
+    <div id="g-stage" data-layout-allow-overflow>
+      <img id="g-pink" class="g-char" data-layout-allow-overflow src="assets/brand/char-plus.png" alt="pink plus character, the student" />
+      <img id="g-teacher" class="g-char" data-layout-allow-overflow src="assets/brand/char-divide.png" alt="yellow divide character, the teacher" />
+
+      <div id="g-pad">
+        <svg id="g-rings" viewBox="0 0 780 52" fill="none" stroke="#00454d" stroke-width="6" stroke-linecap="round">
+          <path d="M60 46 C 60 6 92 6 92 46" /><path d="M200 46 C 200 6 232 6 232 46" /><path d="M340 46 C 340 6 372 6 372 46" />
+          <path d="M480 46 C 480 6 512 6 512 46" /><path d="M620 46 C 620 6 652 6 652 46" />
+        </svg>
+        <div id="g-head"><span id="g-head-hl"></span><span>My goals this week</span></div>
+        <div id="g-row1" class="g-row">
+          <img src="assets/doodles/clock.svg" alt="" />
+          <div class="g-text">Practice 30 min</div>
+          <div class="g-track"><div id="g-fill1" class="g-fill"></div></div>
+          <img id="g-stamp" src="assets/doodles/check.svg" alt="" />
+        </div>
+        <div id="g-row2" class="g-row">
+          <svg viewBox="0 0 100 100" style="position:absolute;left:0;top:0;width:84px" fill="none" stroke="#00454d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="76" height="76" rx="14" fill="#fbe9b2" /><path d="M30 52 L45 66 L72 36" /></svg>
+          <div class="g-text">Finish 10 problems</div>
+          <div class="g-track"><div id="g-fill2" class="g-fill"></div></div>
+        </div>
+      </div>
+
+      <div id="g-snack-label">Fruit snack!</div>
+      <img id="g-snack" src="assets/doodles/snack.svg" alt="fruit snack" />
+      <img id="g-s1" class="g-star" src="assets/doodles/star.svg" alt="" />
+      <img id="g-s2" class="g-star" src="assets/doodles/star.svg" alt="" />
+      <img id="g-s3" class="g-star" src="assets/doodles/star.svg" alt="" />
+    </div>
+  </div>
+
+  <script>
+    // Scene seconds = voiceover word time (assets/voice/vo_meta.json, s6).
+    const tl = gsap.timeline({ paused: true });
+    // initial states, applied before frame 0 (the tweens below revert to them when seeking back)
+    const S = (t, v) => gsap.set(t, v);
+    const OUT = "power4.out";
+    const DUR = 11.84;
+
+    S("#g-stage", { x: 700 });
+    S("#g-pad", { opacity: 0, scale: 0.8, rotation: -2 });
+    S("#g-head-hl", { scaleX: 0 });
+    S(".g-row", { opacity: 0 });
+    S(".g-text", { clipPath: "inset(0 100% 0 0)" });
+    S(".g-fill", { scaleX: 0 });
+    S("#g-fill2", { scaleX: 0 });
+    S("#g-stamp", { opacity: 0, scale: 1.6, rotation: -15 });
+    S("#g-teacher", { y: 330 });
+    S("#g-pink", { y: 0 });
+    S("#g-snack", { opacity: 0, scale: 0.3, rotation: -20 });
+    S("#g-snack-label", { opacity: 0, scale: 0.5 });
+    S(".g-star", { opacity: 0, scale: 0.2, rotation: -30 });
+
+    tl.to("#g-stage", { x: 0, duration: 0.55, ease: "power3.out" }, 0);
+
+    // "Your tutor will also help you set math goals"
+    tl.to("#g-pad", { opacity: 1, scale: 1, rotation: -1, duration: 0.5, ease: "back.out(1.4)" }, 0.6);
+    tl.to("#g-head-hl", { scaleX: 1, duration: 0.4, ease: "power2.inOut" }, 2.1);
+    // "how much time you'll spend practicing"
+    tl.to("#g-row1", { opacity: 1, duration: 0.15 }, 3.3);
+    tl.to("#g-row1 .g-text", { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "none" }, 3.35);
+    // "or how much work you'll finish"
+    tl.to("#g-row2", { opacity: 1, duration: 0.15 }, 5.25);
+    tl.to("#g-row2 .g-text", { clipPath: "inset(0 0% 0 0)", duration: 0.55, ease: "none" }, 5.3);
+    tl.to("#g-fill2", { scaleX: 0.45, duration: 0.6, ease: "power2.out" }, 6.0);
+
+    // "if you reach at least one of your goals" — goal 1 fills up and gets a check
+    tl.to("#g-fill1", { scaleX: 1, duration: 1.0, ease: "power2.inOut" }, 7.6);
+    tl.to("#g-stamp", { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(1.8)" }, 8.75);
+
+    // "you can earn a fruit snack from your teacher!"
+    tl.to("#g-teacher", { y: 0, duration: 0.5, ease: "back.out(1.5)" }, 9.25);
+    tl.to("#g-snack", { opacity: 1, scale: 1, rotation: 8, duration: 0.45, ease: "back.out(1.7)" }, 9.9);
+    tl.to("#g-snack-label", { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, 10.05);
+    tl.to(".g-star", { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)", stagger: 0.07 }, 10.0);
+    tl.to(["#g-pink", "#g-teacher"], { y: -50, duration: 0.25, ease: "power2.out", stagger: 0.1 }, 10.45);
+    tl.to(["#g-pink", "#g-teacher"], { y: 0, duration: 0.3, ease: "power2.in", stagger: 0.1 }, 10.7);
+
+    tl.to("#g-stage", { x: -700, duration: 0.4, ease: "power3.in" }, DUR - 0.42);
+
+    window.__timelines["goals"] = tl;
+  </script>
+</template>

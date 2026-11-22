@@ -1,0 +1,154 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "DM Sans", sans-serif; }
+    #t-stage { position: absolute; inset: 0; }
+    .t-char { position: absolute; transform-origin: 50% 100%; }
+    #t-pink { left: 150px; bottom: 120px; width: 360px; }
+
+    #t-q { position: absolute; left: 470px; top: 170px; width: 170px; transform-origin: 50% 100%; }
+
+    /* the real PLUS team photo as a taped polaroid */
+    #t-board { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 1700px 400px; }
+    #t-polaroid { position: absolute; left: 720px; top: 120px; width: 740px; padding: 22px 22px 86px; background: #ffffff; border-radius: 6px; box-shadow: 0 10px 0 rgba(0, 69, 77, 0.08); transform-origin: 50% 0%; }
+    #t-photo { display: block; width: 696px; height: 331px; object-fit: cover; border-radius: 3px; }
+    #t-caption { position: absolute; left: 0; right: 0; bottom: 22px; text-align: center; font-size: 36px; font-weight: 800; color: #00454d; }
+    .t-tape { position: absolute; top: -16px; width: 130px; height: 38px; background: #fbe9b2; opacity: 0.9; border-radius: 4px; }
+    #t-tape-l { left: -24px; transform: rotate(-16deg); }
+    #t-tape-r { right: -24px; transform: rotate(14deg); }
+
+    /* sticky notes around the photo */
+    .t-note { position: absolute; width: 280px; height: 250px; padding: 20px 16px; border-radius: 6px; text-align: center; font-size: 37px; font-weight: 800; line-height: 1.15; color: #00454d; box-shadow: 0 8px 0 rgba(0, 69, 77, 0.07); }
+    .t-note svg { display: block; width: 92px; height: 92px; margin: 0 auto 10px; }
+    #t-n1 { left: 1490px; top: 90px; background: #fbe9b2; }
+    #t-n2 { left: 1520px; top: 370px; background: #d7eefd; }
+    #t-n3 { left: 1150px; top: 600px; background: #f8dbef; }
+
+    /* "I don't understand... yet" */
+    #t-bubble { position: absolute; left: 300px; top: 300px; padding: 22px 34px; background: #ffffff; border: 5px solid #00454d; border-radius: 34px 34px 34px 8px; font-size: 50px; font-weight: 800; color: #00454d; white-space: nowrap; transform-origin: 0% 100%; }
+    #t-yet { position: relative; display: inline-block; }
+    #t-yet-hl { position: absolute; left: -8px; right: -10px; bottom: 4px; height: 26px; background: #f5c263; opacity: 0.6; border-radius: 14px 6px 16px 8px; transform-origin: 0% 50%; }
+    #t-yet-word { position: relative; }
+
+    /* a mistake on paper, later fixed */
+    #t-paper { position: absolute; left: 560px; top: 520px; width: 440px; height: 150px; background: #ffffff; border: 4px solid #90c9f4; border-radius: 10px; transform-origin: 50% 50%; }
+    #t-sum { position: absolute; left: 36px; top: 38px; font-size: 60px; font-weight: 800; color: #00454d; white-space: nowrap; }
+    #t-wrong { position: relative; display: inline-block; color: #be5052; }
+    #t-strike { position: absolute; left: 248px; top: 72px; width: 96px; height: 10px; background: #be5052; border-radius: 6px; transform-origin: 0% 50%; }
+    #t-right { position: absolute; left: 340px; top: 30px; font-size: 60px; font-weight: 800; color: #298c6b; }
+    #t-check { position: absolute; left: 960px; top: 470px; width: 96px; }
+    .t-star { position: absolute; width: 60px; }
+    #t-s1 { left: 130px; top: 560px; }
+    #t-s2 { left: 470px; top: 600px; width: 46px; }
+    #t-s3 { left: 330px; top: 470px; width: 40px; }
+  </style>
+
+  <div id="root" data-composition-id="tutor" data-width="1920" data-height="1080">
+    <div id="t-stage">
+      <img id="t-pink" class="t-char" data-layout-allow-overflow src="assets/brand/char-plus.png" alt="pink plus character, the student" />
+      <img id="t-q" src="assets/doodles/question.svg" alt="" />
+
+      <div id="t-board" data-layout-allow-overflow>
+        <div id="t-polaroid">
+          <img id="t-photo" src="assets/photos/plus-team.webp" alt="The PLUS tutor team" />
+          <div id="t-caption">PLUS tutors · Carnegie Mellon</div>
+          <span id="t-tape-l" class="t-tape"></span>
+          <span id="t-tape-r" class="t-tape"></span>
+        </div>
+        <div id="t-n1" class="t-note">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#00454d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="40" fill="#ffffff" /><circle cx="37" cy="42" r="4" fill="#00454d" stroke="none" /><circle cx="63" cy="42" r="4" fill="#00454d" stroke="none" /><path d="M34 60 Q50 74 66 60" /></svg>
+          Gets to know you
+        </div>
+        <div id="t-n2" class="t-note">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#00454d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20 Q12 10 22 10 L78 10 Q88 10 88 20 L88 62 Q88 72 78 72 L40 72 L22 90 L24 72 L22 72 Q12 72 12 62 Z" fill="#ffffff" /><path d="M40 32 Q40 22 50 22 Q60 22 60 31 Q60 38 50 42 L50 48" /><circle cx="50" cy="59" r="3" fill="#00454d" stroke="none" /></svg>
+          Answers your questions
+        </div>
+        <div id="t-n3" class="t-note">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#00454d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 78 L30 56 L70 16 L84 30 L44 70 Z" fill="#f5c263" /><path d="M22 78 L44 70" /><path d="M64 22 L78 36" /></svg>
+          Helps with tricky problems
+        </div>
+      </div>
+
+      <div id="t-paper">
+        <div id="t-sum">7 × 8 = <span id="t-wrong">54</span></div>
+        <span id="t-strike"></span>
+        <div id="t-right">56</div>
+      </div>
+      <img id="t-check" src="assets/doodles/check.svg" alt="" />
+
+      <div id="t-bubble">I don't understand… <span id="t-yet"><span id="t-yet-hl"></span><span id="t-yet-word">yet</span></span></div>
+
+      <img id="t-s1" class="t-star" src="assets/doodles/star.svg" alt="" />
+      <img id="t-s2" class="t-star" src="assets/doodles/star.svg" alt="" />
+      <img id="t-s3" class="t-star" src="assets/doodles/star.svg" alt="" />
+    </div>
+  </div>
+
+  <script>
+    // Scene seconds = voiceover word time (assets/voice/vo_meta.json, s2).
+    const tl = gsap.timeline({ paused: true });
+    // initial states, applied before frame 0 (the tweens below revert to them when seeking back)
+    const S = (t, v) => gsap.set(t, v);
+    const OUT = "power4.out";
+    const DUR = 16.871;
+
+    S("#t-stage", { x: 700 });
+    S("#t-q", { opacity: 0, scale: 0.3, rotation: -15 });
+    S("#t-polaroid", { opacity: 0, y: -720, rotation: -12 });
+    S("#t-caption", { opacity: 0, filter: "blur(6px)" });
+    S(".t-note", { opacity: 0, scale: 0.4 });
+    S("#t-n1", { rotation: 6 });
+    S("#t-n2", { rotation: -5 });
+    S("#t-n3", { rotation: 4 });
+    S("#t-board", { x: 0, scale: 1 });
+    S("#t-bubble", { opacity: 0, scale: 0.5 });
+    S("#t-yet", { opacity: 0 });
+    S("#t-yet-hl", { scaleX: 0 });
+    S("#t-paper", { opacity: 0, rotation: -4, y: 40 });
+    S("#t-strike", { scaleX: 0, rotation: -12 });
+    S("#t-right", { opacity: 0, scale: 0.4 });
+    S("#t-check", { opacity: 0, scale: 0.3 });
+    S(".t-star", { opacity: 0, scale: 0.2, rotation: -30 });
+    S("#t-pink", { y: 0, rotation: 0 });
+
+    // entry: arrive from the right, mid-motion
+    tl.to("#t-stage", { x: 0, duration: 0.55, ease: "power3.out" }, 0);
+
+    // "So, who is your tutor?" — a big question mark draws above the student
+    tl.to("#t-q", { opacity: 1, scale: 1, rotation: 0, duration: 0.45, ease: "back.out(1.6)" }, 0.85);
+    tl.to("#t-pink", { rotation: -5, duration: 0.3, ease: "power2.out" }, 1.0);
+
+    // "Your tutor is a college student" — the question becomes the team polaroid
+    tl.to("#t-q", { opacity: 0, scale: 0.5, x: 160, y: -40, duration: 0.3, ease: "power3.in" }, 2.0);
+    tl.to("#t-polaroid", { opacity: 1, y: 0, rotation: -3, duration: 0.7, ease: "back.out(1.3)" }, 2.1);
+    tl.to("#t-pink", { rotation: 0, duration: 0.4, ease: "power2.out" }, 2.4);
+    // "...from Carnegie Mellon University"
+    tl.to("#t-caption", { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: OUT }, 4.4);
+
+    // "get to know you" · "answer your questions" · "help ... tricky problems"
+    tl.to("#t-n1", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" }, 6.3);
+    tl.to("#t-n2", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" }, 7.5);
+    tl.to("#t-n3", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" }, 9.05);
+
+    // "It's okay to make mistakes" — the board makes room, a mistake appears on paper
+    tl.to("#t-board", { x: 120, scale: 0.78, duration: 0.7, ease: "power3.inOut" }, 10.75);
+    tl.to("#t-paper", { opacity: 1, y: 0, duration: 0.45, ease: OUT }, 11.5);
+    tl.to("#t-strike", { scaleX: 1, duration: 0.3, ease: "power2.out" }, 11.95);
+
+    // "or say, 'I don't understand yet.'"
+    tl.to("#t-bubble", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 12.9);
+    tl.to("#t-yet", { opacity: 1, duration: 0.15 }, 14.1);
+    tl.to("#t-yet-hl", { scaleX: 1, duration: 0.35, ease: "power2.inOut" }, 14.2);
+
+    // "That's part of learning!" — the right answer, a check, stars, a happy hop
+    tl.to("#t-right", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 15.1);
+    tl.to("#t-check", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 15.45);
+    tl.to(".t-star", { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.8)", stagger: 0.07 }, 15.5);
+    tl.to("#t-pink", { y: -60, duration: 0.25, ease: "power2.out" }, 15.5);
+    tl.to("#t-pink", { y: 0, duration: 0.3, ease: "power2.in" }, 15.75);
+
+    // exit: travel left with the camera
+    tl.to("#t-stage", { x: -700, duration: 0.4, ease: "power3.in" }, DUR - 0.42);
+
+    window.__timelines["tutor"] = tl;
+  </script>
+</template>

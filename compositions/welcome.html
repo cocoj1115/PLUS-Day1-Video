@@ -1,9 +1,7 @@
 <template>
   <style>
-    #root { position: absolute; inset: 0; overflow: hidden; background: #f9f5ef; font-family: "DM Sans", sans-serif; }
-
-    /* landscape (from the handbook cover) */
-    #w-hill-mint, #w-hill-green { position: absolute; left: 0; bottom: 0; width: 1920px; height: 1080px; }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "DM Sans", sans-serif; }
+    #w-stage { position: absolute; inset: 0; }
 
     /* title */
     #w-title { position: absolute; left: 0; right: 0; top: 330px; display: flex; justify-content: center; align-items: center; gap: 30px; transform-origin: 50% 50%; }
@@ -13,129 +11,111 @@
     #w-plus-word { position: relative; }
     #w-icon { width: 104px; height: auto; display: inline-block; }
 
-    /* mascots peeking over the hill */
+    /* mascots on the hill */
     .w-char { position: absolute; transform-origin: 50% 100%; }
     #w-c-plus { left: 60px; bottom: 120px; width: 380px; }
     #w-c-greater { left: 390px; bottom: 215px; width: 220px; }
     #w-c-equals { right: 70px; bottom: 120px; width: 300px; }
     #w-c-divide { right: 400px; bottom: 120px; width: 180px; }
 
-    /* hand-drawn laptop */
+    /* hand-drawn laptop: the screen is x 62–640, y 18–380 inside this 700×470 box */
     #w-laptop { position: absolute; left: 610px; top: 330px; width: 700px; height: 470px; }
     #w-laptop svg { position: absolute; inset: 0; overflow: visible; }
-    #w-math { position: absolute; left: 60px; right: 60px; top: 205px; text-align: center; font-size: 72px; font-weight: 800; color: #367cb3; letter-spacing: 0.02em; white-space: nowrap; }
+    #w-math { position: absolute; left: 80px; width: 380px; top: 205px; text-align: center; font-size: 66px; font-weight: 800; color: #367cb3; letter-spacing: 0.02em; white-space: nowrap; }
     #w-math span { display: inline-block; }
-    #w-tutor { position: absolute; right: 52px; top: 40px; width: 170px; height: 150px; border-radius: 16px; background: #d7eefd; border: 4px solid #90c9f4; transform-origin: 100% 0%; }
-    #w-tutor svg { position: absolute; left: 39px; top: 8px; width: 92px; height: 92px; }
-    #w-tutor-label { position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; font-size: 28px; font-weight: 700; color: #367cb3; }
-    #w-bubble { position: absolute; right: 236px; top: 30px; padding: 12px 24px; background: #ffffff; border: 4px solid #00454d; border-radius: 26px 26px 6px 26px; font-size: 34px; font-weight: 800; color: #00454d; transform-origin: 100% 100%; white-space: nowrap; }
+    /* the tutor joins as a video tile, fully inside the screen */
+    #w-tutor { position: absolute; left: 468px; top: 46px; width: 150px; height: 150px; border-radius: 18px; background: #d7eefd; border: 5px solid #90c9f4; overflow: hidden; transform-origin: 50% 50%; }
+    #w-tutor img { position: absolute; left: 12px; top: 10px; width: 116px; }
+    #w-tutor-label { position: absolute; left: 0; right: 0; bottom: 4px; text-align: center; font-size: 28px; font-weight: 700; color: #00454d; }
+    #w-bubble { position: absolute; left: 352px; top: 58px; padding: 6px 18px; background: #ffffff; border: 4px solid #00454d; border-radius: 22px 22px 6px 22px; font-size: 32px; font-weight: 800; color: #00454d; transform-origin: 100% 100%; white-space: nowrap; }
   </style>
 
   <div id="root" data-composition-id="welcome" data-width="1920" data-height="1080">
-    <!-- handbook-cover landscape, redrawn full width -->
-    <svg id="w-hill-mint" data-layout-ignore viewBox="0 0 1920 1080" preserveAspectRatio="none">
-      <path d="M0 830 C 420 790 760 720 1120 700 C 1460 680 1720 600 1920 560 L1920 1080 L0 1080 Z" fill="#deefde" />
-    </svg>
-    <svg id="w-hill-green" data-layout-ignore viewBox="0 0 1920 1080" preserveAspectRatio="none" fill="none" stroke-linecap="round">
-      <path d="M0 860 C 380 820 720 870 1060 920 C 1400 965 1700 940 1920 900 L1920 1080 L0 1080 Z" fill="#5c9c62" />
-      <g stroke="#a0cca3" stroke-width="4">
-        <path d="M160 960 l-6 -22 M176 962 l4 -24" /><path d="M520 990 l-5 -20 M535 992 l3 -22" />
-        <path d="M880 1010 l-6 -22 M896 1012 l4 -24" /><path d="M1250 1020 l-5 -20 M1265 1021 l3 -22" />
-        <path d="M1610 1000 l-6 -22 M1626 1002 l4 -24" /><path d="M1820 975 l-5 -20 M1835 976 l3 -22" />
-      </g>
-    </svg>
+    <div id="w-stage">
+      <img id="w-c-plus" class="w-char" data-layout-allow-overflow src="assets/brand/char-plus.png" alt="pink plus character" />
+      <img id="w-c-greater" class="w-char" data-layout-allow-overflow src="assets/brand/char-greater.png" alt="green greater-than character" />
+      <img id="w-c-divide" class="w-char" data-layout-allow-overflow src="assets/brand/char-divide.png" alt="yellow divide character" />
+      <img id="w-c-equals" class="w-char" data-layout-allow-overflow src="assets/brand/char-equals.png" alt="blue equals character" />
 
-    <img id="w-c-plus" class="w-char" data-layout-allow-overflow src="assets/brand/char-plus.png" alt="pink plus character" />
-    <img id="w-c-greater" class="w-char" data-layout-allow-overflow src="assets/brand/char-greater.png" alt="green greater-than character" />
-    <img id="w-c-divide" class="w-char" data-layout-allow-overflow src="assets/brand/char-divide.png" alt="yellow divide character" />
-    <img id="w-c-equals" class="w-char" data-layout-allow-overflow src="assets/brand/char-equals.png" alt="blue equals character" />
-
-    <div id="w-title" data-layout-allow-overlap>
-      <span id="w-word-1" class="w-word">Welcome</span>
-      <span id="w-word-2" class="w-word">to</span>
-      <span id="w-plus-wrap">
-        <span id="w-hl"></span>
-        <img id="w-icon" src="assets/brand/plus-icon.png" alt="PLUS logo" />
-        <span id="w-plus-word" class="w-word">PLUS!</span>
-      </span>
-    </div>
-
-    <div id="w-laptop" data-layout-allow-overflow>
-      <svg viewBox="0 0 700 470" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <!-- screen fill, then pencil outlines (slightly wobbly, like the handbook cards) -->
-        <path id="w-screen-fill" d="M62 18 Q350 10 640 20 Q648 190 642 382 Q350 388 58 380 Q52 200 62 18 Z" fill="#ffffff" stroke="none" />
-        <path id="w-screen-line" d="M62 18 Q350 10 640 20 Q648 190 642 382 Q350 388 58 380 Q52 200 62 18 Z" stroke="#00454d" stroke-width="7" />
-        <path id="w-base-line" d="M18 384 Q350 380 684 386 L700 432 Q350 446 2 430 Z" stroke="#00454d" stroke-width="7" fill="#f9f5ef" />
-        <path id="w-notch" d="M300 400 Q350 404 400 400" stroke="#00454d" stroke-width="6" />
-      </svg>
-      <div id="w-math"><span>3x</span> <span>+</span> <span>5</span> <span>=</span> <span>20</span></div>
-      <div id="w-tutor">
-        <svg viewBox="0 0 100 100" fill="none" stroke="#3f484a" stroke-width="4" stroke-linecap="round">
-          <circle cx="50" cy="40" r="26" fill="#f2acaa" stroke="none" />
-          <circle cx="41" cy="36" r="3" fill="#3f484a" stroke="none" />
-          <circle cx="59" cy="36" r="3" fill="#3f484a" stroke="none" />
-          <path d="M40 48 Q50 57 60 48" />
-          <path d="M20 98 Q50 66 80 98" fill="#90c9f4" stroke="none" />
-        </svg>
-        <div id="w-tutor-label">Tutor</div>
+      <div id="w-title" data-layout-allow-overlap>
+        <span id="w-word-1" class="w-word">Welcome</span>
+        <span id="w-word-2" class="w-word">to</span>
+        <span id="w-plus-wrap">
+          <span id="w-hl"></span>
+          <img id="w-icon" src="assets/brand/plus-icon.png" alt="PLUS logo" />
+          <span id="w-plus-word" class="w-word">PLUS!</span>
+        </span>
       </div>
-      <div id="w-bubble">Hi there!</div>
+
+      <div id="w-laptop">
+        <svg viewBox="0 0 700 470" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M62 18 Q350 10 640 20 Q648 190 642 382 Q350 388 58 380 Q52 200 62 18 Z" fill="#ffffff" stroke="none" />
+          <path id="w-screen-line" d="M62 18 Q350 10 640 20 Q648 190 642 382 Q350 388 58 380 Q52 200 62 18 Z" stroke="#00454d" stroke-width="7" />
+          <path id="w-base-line" d="M18 384 Q350 380 684 386 L700 432 Q350 446 2 430 Z" stroke="#00454d" stroke-width="7" fill="#f9f5ef" />
+          <path id="w-notch" d="M300 400 Q350 404 400 400" stroke="#00454d" stroke-width="6" />
+        </svg>
+        <div id="w-math"><span>3x</span> <span>+</span> <span>5</span> <span>=</span> <span>20</span></div>
+        <div id="w-tutor">
+          <img src="assets/brand/char-equals.png" alt="tutor" />
+          <div id="w-tutor-label">Tutor</div>
+        </div>
+        <div id="w-bubble">Hi!</div>
+      </div>
     </div>
   </div>
 
   <script>
-    // Times are scene seconds = voiceover word time + 0.3 s lead-in (assets/voice/vo_meta.json, s1).
+    // Scene seconds = voiceover word time + 0.3 s lead-in (assets/voice/vo_meta.json, s1).
     const tl = gsap.timeline({ paused: true });
+    // initial states, applied before frame 0 (the tweens below revert to them when seeking back)
+    const S = (t, v) => gsap.set(t, v);
     const OUT = "power4.out";
+    const DUR = 7.403;
 
-    // initial states
-    gsap.set(["#w-word-1", "#w-word-2", "#w-plus-word"], { opacity: 0, filter: "blur(8px)" });
-    gsap.set("#w-icon", { opacity: 0, scale: 0.4, rotation: -20 });
-    gsap.set("#w-hl", { scaleX: 0 });
-    gsap.set(".w-char", { y: 320 });
-    gsap.set("#w-laptop", { opacity: 0, y: 60 });
-    gsap.set(["#w-screen-line", "#w-base-line", "#w-notch"], { strokeDasharray: 2200, strokeDashoffset: 2200 });
-    gsap.set("#w-math span", { opacity: 0, y: 24, filter: "blur(6px)" });
-    gsap.set("#w-tutor", { opacity: 0, scale: 0.6 });
-    gsap.set("#w-bubble", { opacity: 0, scale: 0.5 });
+    S(["#w-word-1", "#w-word-2", "#w-plus-word"], { opacity: 0, filter: "blur(8px)" });
+    S("#w-icon", { opacity: 0, scale: 0.4, rotation: -20 });
+    S("#w-hl", { scaleX: 0 });
+    S(".w-char", { y: 340, rotation: 0 });
+    S("#w-laptop", { opacity: 0, y: 60 });
+    S(["#w-screen-line", "#w-base-line", "#w-notch"], { strokeDasharray: 2200, strokeDashoffset: 2200 });
+    S("#w-math span", { opacity: 0, y: 24, filter: "blur(6px)" });
+    S("#w-tutor", { opacity: 0, scale: 0.6 });
+    S("#w-bubble", { opacity: 0, scale: 0.5 });
+    S("#w-title", { y: 0, scale: 1 });
+    S("#w-stage", { x: 0 });
 
-    // 0.0 – the hills rise in, establishing the handbook landscape
-    tl.fromTo("#w-hill-mint", { y: 260 }, { y: 0, duration: 1.0, ease: "power3.out" }, 0);
-    tl.fromTo("#w-hill-green", { y: 300 }, { y: 0, duration: 1.0, ease: "power3.out" }, 0.08);
-
-    // "Welcome" 0.56 · "to" 1.03 · "PLUS" 1.15 — per-word blur-in, the logo tile pops in with PLUS
+    // "Welcome" 0.56 · "to" 1.03 · "PLUS" 1.15
     tl.to("#w-word-1", { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: OUT }, 0.56);
     tl.to("#w-word-2", { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: OUT }, 1.03);
     tl.to("#w-icon", { opacity: 1, scale: 1, rotation: 0, duration: 0.45, ease: "back.out(1.6)" }, 1.13);
     tl.to("#w-plus-word", { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: OUT }, 1.15);
-    // highlighter swipe under PLUS!
     tl.to("#w-hl", { scaleX: 1, duration: 0.38, ease: "power2.inOut" }, 1.4);
 
-    // "We're excited to meet you" — the mascots pop up from behind the hill, one per beat,
-    // each lands with a small wave (a single swing, not a loop)
-    const pops = [["#w-c-plus", 1.75], ["#w-c-equals", 2.0], ["#w-c-greater", 2.26], ["#w-c-divide", 2.49]];
-    pops.forEach(([sel, t]) => {
+    // "We're excited to meet you" — mascots pop up from behind the hill and wave once
+    [["#w-c-plus", 1.75], ["#w-c-equals", 2.0], ["#w-c-greater", 2.26], ["#w-c-divide", 2.49]].forEach(([sel, t]) => {
       tl.to(sel, { y: 0, duration: 0.5, ease: "back.out(1.5)" }, t);
-      tl.fromTo(sel, { rotation: 0 }, { rotation: -7, duration: 0.18, ease: "power2.out" }, t + 0.45);
+      tl.to(sel, { rotation: -7, duration: 0.18, ease: "power2.out" }, t + 0.45);
       tl.to(sel, { rotation: 4, duration: 0.2, ease: "power2.inOut" }, t + 0.63);
       tl.to(sel, { rotation: 0, duration: 0.25, ease: "power2.out" }, t + 0.83);
     });
 
-    // "PLUS helps you" 3.5 — the title makes room: nudges up and settles smaller
+    // "PLUS helps you" — the title makes room
     tl.to("#w-title", { y: -205, scale: 0.62, duration: 0.7, ease: "power3.inOut" }, 3.35);
 
-    // "learn math" 4.4–4.6 — the laptop is drawn in pencil, then the problem appears on screen
+    // "learn math" — the laptop is drawn in pencil, then the problem appears
     tl.to("#w-laptop", { opacity: 1, y: 0, duration: 0.5, ease: OUT }, 3.75);
     tl.to("#w-screen-line", { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, 3.8);
     tl.to("#w-base-line", { strokeDashoffset: 0, duration: 0.55, ease: "power2.inOut" }, 4.1);
     tl.to("#w-notch", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 4.4);
     tl.to("#w-math span", { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.22, ease: OUT, stagger: 0.08 }, 4.6);
 
-    // "online tutor" 5.85–6.27 — the tutor joins the call, then says hi
-    tl.to("#w-tutor", { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.6)" }, 6.2);
-    tl.to("#w-bubble", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, 6.75);
-    // the pink plus leans in toward the laptop, reacting to the tutor arriving
+    // "online tutor" — the tutor joins inside the screen and says hi
+    tl.to("#w-tutor", { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.6)" }, 6.0);
+    tl.to("#w-bubble", { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)" }, 6.35);
     tl.to("#w-c-plus", { rotation: 6, duration: 0.4, ease: "power2.out" }, 6.25);
+
+    // exit: everything travels left with the camera
+    tl.to("#w-stage", { x: -700, duration: 0.4, ease: "power3.in" }, DUR - 0.42);
 
     window.__timelines["welcome"] = tl;
   </script>
